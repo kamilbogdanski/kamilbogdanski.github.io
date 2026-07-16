@@ -28,151 +28,150 @@
         }
 
         /* 
-           --- LUKSUSOWE EFEKTY GRADIENTOWE TYLKO DLA KOLOROWYCH SEKCJI ---
+           --- KLASY ZAKOŃCZONE I WYGŁADZONE (BEZRAMKOWY GIPS / FLAT MINIMAL) ---
         */
-        
-        /* Delikatny gradient tła dla całej sekcji Hero - efekt świetlistości */
-        .hero-glow-bg {
-            background: radial-gradient(circle at 80% 20%, rgba(242, 236, 225, 0.45) 0%, rgba(250, 248, 245, 0) 60%);
-        }
 
-        /* Gradient dla kart neomorficznych 3D - efekt gipsu i piasku */
-        .card-warm-gradient {
-            background: linear-gradient(145deg, #FAF8F5 0%, #F2ECE1 100%);
-            box-shadow: 
-                -8px -8px 25px rgba(255, 255, 255, 0.95), 
-                10px 10px 30px rgba(46, 34, 28, 0.05),
-                inset 1px 1px 2px rgba(255, 255, 255, 0.6);
-        }
-
-        /* Wewnętrzny gradient w makiecie UI dający efekt głębi */
+        /* Duża makieta po prawej stronie (całkowicie płaskie tło bez ramki i cienia) */
         .ui-mock-gradient {
-            background: linear-gradient(135deg, #F5EFE4 0%, #EAE1D3 100%);
-            box-shadow: 
-                inset 1px 1px 4px rgba(255, 255, 255, 0.5),
-                inset -1px -1px 4px rgba(46, 34, 28, 0.02);
+            background: #F2ECE1 !important;
+            border: none !important;
+            box-shadow: none !important;
         }
 
-        /* Płynny, aksamitny gradient dla ciemnego CTA z poświatą luksusowego brązu */
+        /* Miękkie, neomorficzne, "gipsowe" karty (całkowicie bezramkowe) */
+        .card-warm-gradient {
+            background: #FAF8F5 !important;
+            border: none !important;
+            box-shadow: 
+                -4px -4px 12px rgba(255, 255, 255, 0.95), 
+                6px 6px 18px rgba(46, 34, 28, 0.04),
+                inset 1px 1px 1px rgba(255, 255, 255, 0.8) !important;
+        }
+
+        /* Brązowy, czysty kafelek (Aksamitna Czekolada) */
         .dark-cta-gradient {
-            background: linear-gradient(135deg, #2E221C 0%, #201612 50%, #150E0B 100%);
+            background: #2E221C !important;
+            border: none !important;
             box-shadow: 
-                0 30px 60px rgba(21, 14, 11, 0.25),
-                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+                6px 6px 18px rgba(46, 34, 28, 0.15),
+                inset 0px 1px 1px rgba(255, 255, 255, 0.1) !important;
         }
 
-        /* Przyciski płaskie (mniej świetliste, minimalistyczne, bez intensywnych cieni) */
+        /* Przyciski całkowicie płaskie i minimalistyczne (bez efektu świecenia) */
         .button-minimal {
-            box-shadow: none;
-            transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+            box-shadow: none !important;
+            transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease !important;
         }
         .button-minimal:hover {
-            transform: translateY(-1px);
+            transform: translateY(-1px) !important;
         }
     </style>
 </head>
-<body class="overflow-x-hidden hero-glow-bg">
+<body class="overflow-x-hidden">
 
     <!-- NAVBAR -->
-<header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-    <!-- Logo / Avatar -->
-    <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#E9E1D3] flex items-center justify-center overflow-hidden shadow-sm">
-            <svg class="w-6 h-6" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 33.5 33.5 C 19 48 19 71 33.5 85.5 C 48 100 71 100 85.5 85.5 C 100 71 100 48 85.5 33.5 C 75.5 23.5 61.5 20 48.5 23" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
-                <path d="M 30 43 L 53 66" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
-                <path d="M 39 34 L 62 57" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
-                <path d="M 48 25 C 53.5 30.5 54 33 66 45" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
-                <path d="M 59.5 69.5 L 75 75 L 69.5 59.5 Z" fill="#2E221C"/>
-            </svg>
-        </div>
-        <span class="font-medium text-[15px] tracking-tight">Kamil Bogdański</span>
-    </div>
-
-    <!-- Menu nawigacji -->
-    <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-[#5E524C]">
-        <a href="#" class="hover:text-[#2E221C] transition-colors">Usługi</a>
-        <a href="#" class="hover:text-[#2E221C] transition-colors">O mnie</a>
-        <a href="#" class="hover:text-[#2E221C] transition-colors">Doświadczenie</a>
-        <a href="#" class="hover:text-[#2E221C] transition-colors">Kontakt</a>
-    </nav>
-
-    <!-- Przycisk CTA -->
-    <div>
-        <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 button-minimal flex items-center gap-2">
-            Napisz do mnie <span class="text-[12px]">&#10142;</span>
-        </a>
-    </div>
-</header>
-
-<!-- HERO SECTION -->
-<main class="max-w-7xl mx-auto px-6 pt-12 pb-16">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- LEWA STRONA (Teksty) -->
-        <div class="lg:col-span-7 flex flex-col items-start">
-            <!-- Badge statusu -->
-
-            <!-- Główny nagłówek z markerem -->
-            <h1 class="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight mb-6">
-                Piszę słowa, <br>
-                <span class="relative inline-block px-1">
-                    <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
-                    które pracują —
-                </span><br>
-                dla algorytmów <br>
-                <span class="relative inline-block px-1">
-                    <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
-                    i dla ludzi.
-                </span>
-            </h1>
-
-            <!-- Opis oferty -->
-            <p class="text-[#5E524C] text-[16px] md:text-[18px] leading-relaxed max-w-xl mb-10 font-light">
-                Copywriter SEO i UX writer z 6-letnim doświadczeniem. W świecie zdominowanym przez generyczny content stawiam na jakość, którą docenią zarówno ludzie, jak i systemy AI.
-            </p>
-
-            <!-- Przyciski akcji -->
-            <div class="flex flex-wrap items-center gap-4">
-                <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-8 py-4 rounded-full text-[15px] font-medium hover:opacity-95 button-minimal flex items-center gap-2">
-                    Rozpocznij projekt <span class="text-xs">&gt;</span>
-                </a>
-                <a href="#" class="border border-[#D9D1C5] text-[#2E221C] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-[#F3EDE4] button-minimal">
-                    Zobacz usługi
-                </a>
+    <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <!-- Logo / Avatar -->
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#E9E1D3] flex items-center justify-center overflow-hidden shadow-sm">
+                <svg class="w-6 h-6" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 33.5 33.5 C 19 48 19 71 33.5 85.5 C 48 100 71 100 85.5 85.5 C 100 71 100 48 85.5 33.5 C 75.5 23.5 61.5 20 48.5 23" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 30 43 L 53 66" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 39 34 L 62 57" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 48 25 C 53.5 30.5 54 33 66 45" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 59.5 69.5 L 75 75 L 69.5 59.5 Z" fill="#2E221C"/>
+                </svg>
             </div>
+            <span class="font-medium text-[15px] tracking-tight">Kamil Bogdański</span>
         </div>
 
-        <!-- PRAWA STRONA (Makieta 3D - Całkowicie płaska ramka, miękkie karty) -->
-        <div class="lg:col-span-5 flex justify-center lg:justify-end">
-            <div class="w-full max-w-[430px] ui-mock-gradient rounded-[40px] p-8 relative flex flex-col gap-5 min-h-[380px] justify-center">
-                <!-- Techniczny tag w rogu -->
-                <span class="absolute top-5 right-6 text-[9px] font-bold text-[#A59B90] tracking-widest uppercase">Kamil // Design</span>
-                
-                <!-- Pusty Stan (Miękka, bezramkowa karta) -->
-                <div class="card-warm-gradient rounded-2xl p-5">
-                    <span class="text-[9px] font-bold tracking-wider text-[#A1968A] block mb-1">PUSTY STAN</span>
-                    <p class="text-[14px] text-[#2E221C] font-semibold">Tu jeszcze pusto — dodaj pierwszy artykuł.</p>
+        <!-- Menu nawigacji -->
+        <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-[#5E524C]">
+            <a href="#" class="hover:text-[#2E221C] transition-colors">Usługi</a>
+            <a href="#" class="hover:text-[#2E221C] transition-colors">O mnie</a>
+            <a href="#" class="hover:text-[#2E221C] transition-colors">Doświadczenie</a>
+            <a href="#" class="hover:text-[#2E221C] transition-colors">Kontakt</a>
+        </nav>
+
+        <!-- Przycisk CTA -->
+        <div>
+            <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 button-minimal flex items-center gap-2">
+                Napisz do mnie <span class="text-[12px]">&#10142;</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main class="max-w-7xl mx-auto px-6 pt-12 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- LEWA STRONA (Teksty) -->
+            <div class="lg:col-span-7 flex flex-col items-start">
+                <!-- Badge statusu -->
+                <div class="inline-flex items-center gap-2 bg-[#F3EDE4] border border-[#FAF8F5] px-3 py-1.5 rounded-full text-[12px] font-semibold text-[#665B55] mb-8 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+                    Dostępny na projekty — Q3 2026
                 </div>
 
-                <!-- CTA (Ciemny, płaski przycisk) -->
-                <div class="self-end dark-cta-gradient text-[#FAF8F5] rounded-3xl py-4 px-10 transform translate-x-2">
-                    <span class="text-[13px] font-bold tracking-widest">CTA</span>
-                </div>
+                <!-- Główny nagłówek z markerem -->
+                <h1 class="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight mb-6">
+                    Piszę słowa, <br>
+                    <span class="relative inline-block px-1">
+                        <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
+                        które pracują —
+                    </span><br>
+                    dla algorytmów <br>
+                    <span class="relative inline-block px-1">
+                        <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
+                        i dla ludzi.
+                    </span>
+                </h1>
 
-                <!-- Meta Title (Miękka, bezramkowa karta) -->
-                <div class="card-warm-gradient rounded-2xl p-5">
-                    <span class="text-[9px] font-bold tracking-wider text-[#A1968A] block mb-1">META TITLE</span>
-                    <p class="text-[14px] text-[#2E221C] font-semibold">Krem nawilżający z retinolem — recenzja & skład</p>
+                <!-- Opis oferty -->
+                <p class="text-[#5E524C] text-[16px] md:text-[18px] leading-relaxed max-w-xl mb-10 font-light">
+                    Copywriter SEO i UX writer z 6-letnim doświadczeniem. W świecie zdominowanym przez generyczny content stawiam na jakość, którą docenią zarówno ludzie, jak i systemy AI.
+                </p>
+
+                <!-- Przyciski akcji -->
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-8 py-4 rounded-full text-[15px] font-medium hover:opacity-95 button-minimal flex items-center gap-2">
+                        Rozpocznij projekt <span class="text-xs">&gt;</span>
+                    </a>
+                    <a href="#" class="border border-[#D9D1C5] text-[#2E221C] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-[#F3EDE4] button-minimal">
+                        Zobacz usługi
+                    </a>
                 </div>
             </div>
+
+            <!-- PRAWA STRONA (Makieta UI - Płaska ramka, miękkie gipsowe karty) -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                <div class="w-full max-w-[430px] ui-mock-gradient rounded-[40px] p-8 relative flex flex-col gap-5 min-h-[380px] justify-center">
+                    <span class="absolute top-5 right-6 text-[9px] font-bold text-[#A59B90] tracking-widest uppercase">Kamil // Design</span>
+                    
+                    <!-- Pusty Stan -->
+                    <div class="card-warm-gradient rounded-2xl p-5">
+                        <span class="text-[9px] font-bold tracking-wider text-[#A1968A] block mb-1">PUSTY STAN</span>
+                        <p class="text-[14px] text-[#2E221C] font-semibold">Tu jeszcze pusto — dodaj pierwszy artykuł.</p>
+                    </div>
+
+                    <!-- CTA (Brązowa krowa) -->
+                    <div class="self-end dark-cta-gradient text-[#FAF8F5] rounded-3xl py-4 px-10 transform translate-x-2">
+                        <span class="text-[13px] font-bold tracking-widest">CTA</span>
+                    </div>
+
+                    <!-- Meta Title -->
+                    <div class="card-warm-gradient rounded-2xl p-5">
+                        <span class="text-[9px] font-bold tracking-wider text-[#A1968A] block mb-1">META TITLE</span>
+                        <p class="text-[14px] text-[#2E221C] font-semibold">Krem nawilżający z retinolem — recenzja & skład</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </main>
 
-    </div>
-</main>
-
-    <!-- HORIZONTAL SCROLL TICKER -->
-    <section class="w-full border-t border-b border-[#EBE3D5] bg-gradient-to-r from-[#FAF8F5] via-[#FDFDFD] to-[#FAF8F5] py-4 overflow-hidden relative">
+    <!-- HORIZONTAL SCROLL TICKER (Nieskończona karuzela) -->
+    <section class="w-full border-t border-b border-[#EBE3D5] bg-[#FAF8F5] py-4 overflow-hidden relative">
         <div class="flex whitespace-nowrap">
             <div class="flex items-center gap-12 text-[13px] font-semibold text-[#8E8276] uppercase tracking-[4px] animate-marquee">
                 <span>Photoshop</span> <span class="text-[#D3C7B9] font-light">+</span>
@@ -325,55 +324,49 @@
         </div>
     </section>
 
-   <!-- SECTION: O MNIE (STATYSTYKI Z PLASTYCZNYMI KAFELKAMI) -->
-<section class="max-w-6xl mx-auto px-6 pb-32 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    
-    <!-- LEWA STRONA: WARM NEUMORPHIC STATS BOX -->
-    <div class="lg:col-span-5 bg-[#F2ECE1] border border-[#EBE3D5] rounded-[32px] p-8 flex flex-col gap-6 shadow-sm">
-        
-        <!-- Górny biały tag -->
-        <div class="bg-white rounded-full py-2.5 px-6 border border-[#E9E1D3] text-center self-start shadow-sm">
-            <span class="text-[9px] font-bold text-[#2E221C] tracking-widest uppercase">AUTOR — KAMIL BOGDAŃSKI</span>
+    <!-- SECTION: O MNIE (STATYSTYKI Z BEZRAMKOWYMI MIĘKKIMI KAFELKAMI) -->
+    <section class="max-w-6xl mx-auto px-6 pb-32 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <!-- LEWA STRONA: WARM BOX -->
+        <div class="lg:col-span-5 bg-[#F2ECE1] border border-[#EBE3D5] rounded-[32px] p-8 flex flex-col gap-6 shadow-sm">
+            <div class="bg-white rounded-full py-2.5 px-6 border border-[#E9E1D3] text-center self-start shadow-sm">
+                <span class="text-[9px] font-bold text-[#2E221C] tracking-widest uppercase">AUTOR — KAMIL BOGDAŃSKI</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <!-- 6+ Lat Praktyki -->
+                <div class="col-span-2 card-warm-gradient rounded-2xl p-6 flex flex-col justify-between min-h-[110px]">
+                    <span class="text-[44px] font-bold text-[#2E221C] block leading-none mb-2">6+</span>
+                    <span class="text-[9px] font-bold text-[#8E8276] tracking-wider uppercase">Lat praktyki</span>
+                </div>
+
+                <!-- 100k+ Artykułów -->
+                <div class="card-warm-gradient rounded-2xl p-6 flex flex-col justify-between min-h-[110px]">
+                    <span class="text-[32px] font-bold text-[#2E221C] block leading-none mb-2">100k+</span>
+                    <span class="text-[9px] font-bold text-[#8E8276] tracking-wider uppercase">Artykułów</span>
+                </div>
+
+                <!-- 10M+ Znaków -->
+                <div class="dark-cta-gradient rounded-2xl p-6 flex flex-col justify-between min-h-[110px]">
+                    <span class="text-[32px] font-bold text-[#FAF8F5] block leading-none mb-2">10M+</span>
+                    <span class="text-[9px] font-bold text-[#A59B90] tracking-wider uppercase">Znaków</span>
+                </div>
+            </div>
         </div>
 
-        <!-- Układ kafelków z miękkim cieniowaniem -->
-        <div class="grid grid-cols-2 gap-4">
-            
-            <!-- 6+ Lat Praktyki -->
-            <div class="col-span-2 card-warm-gradient rounded-2xl p-6 flex flex-col justify-between min-h-[110px]">
-                <span class="text-[44px] font-bold text-[#2E221C] block leading-none mb-2">6+</span>
-                <span class="text-[9px] font-bold text-[#8E8276] tracking-wider uppercase">Lat praktyki</span>
-            </div>
-
-            <!-- 100k+ Artykułów -->
-            <div class="card-warm-gradient rounded-2xl p-6 flex flex-col justify-between min-h-[110px]">
-                <span class="text-[32px] font-bold text-[#2E221C] block leading-none mb-2">100k+</span>
-                <span class="text-[9px] font-bold text-[#8E8276] tracking-wider uppercase">Artykułów</span>
-            </div>
-
-            <!-- 10M+ Znaków (Kontrastowy Ciemny Kafelek) -->
-            <div class="dark-cta-gradient rounded-2xl p-6 flex flex-col justify-between min-h-[110px]">
-                <span class="text-[32px] font-bold text-[#FAF8F5] block leading-none mb-2">10M+</span>
-                <span class="text-[9px] font-bold text-[#A59B90] tracking-wider uppercase">Znaków</span>
-            </div>
-            
+        <!-- PRAWA STRONA -->
+        <div class="lg:col-span-7 flex flex-col items-start justify-center">
+            <span class="text-[9px] font-bold text-[#A59B90] tracking-widest uppercase block mb-4">O MNIE</span>
+            <h3 class="text-[32px] md:text-[44px] font-bold text-[#2E221C] leading-[1.1] tracking-tight mb-6">
+                Piszę od sześciu lat — dla ludzi i dla algorytmów.
+            </h3>
+            <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed mb-6 font-light">
+                Solidny fundament zbudowałem w czołowych agencjach digitalowych w Polsce — Semhead, Verseo, Trust Luna, Euvic Digital i Harbingers. To tam nauczyłem się łączyć cele biznesowe z realnymi potrzebami użytkowników na dużą skalę.
+            </p>
+            <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed font-light">
+                W codziennej pracy sięgam po Claude, Gemini i ChatGPT — nie po to, żeby zastąpić redakcję, ale żeby pisać szybciej i celniej. Prywatnie eksperymentuję z produkcją muzyki w AI, co uczy mnie patrzeć na procesy kreatywne wielowymiarowo.
+            </p>
         </div>
-    </div>
-
-    <!-- PRAWA STRONA -->
-    <div class="lg:col-span-7 flex flex-col items-start justify-center">
-        <span class="text-[9px] font-bold text-[#A59B90] tracking-widest uppercase block mb-4">O MNIE</span>
-        <h3 class="text-[32px] md:text-[44px] font-bold text-[#2E221C] leading-[1.1] tracking-tight mb-6">
-            Pisze od sześciu lat — dla ludzi i dla algorytmów.
-        </h3>
-        <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed mb-6 font-light">
-            Solidny fundament zbudowałem w czołowych agencjach digitalowych w Polsce — Semhead, Verseo, Trust Luna, Euvic Digital i Harbingers[cite: 19]. To tam nauczyłem się łączyć cele biznesowe z realnymi potrzebami użytkowników na dużą skalę[cite: 19].
-        </p>
-        <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed font-light">
-            W codziennej pracy sięgam po Claude, Gemini i ChatGPT — nie po to, żeby zastąpić redakcję, ale żeby pisać szybciej i celniej[cite: 19]. Prywatnie eksperymentuję z produkcją muzyki w AI, co uczy mnie patrzeć na procesy kreatywne wielowymiarowo[cite: 19].
-        </p>
-    </div>
-</section>
+    </section>
 
     <!-- SECTION: DOŚWIADCZENIE -->
     <section class="max-w-6xl mx-auto px-6 pb-32">
@@ -413,7 +406,7 @@
         </div>
     </section>
 
-    <!-- SECTION: CALL TO ACTION (LUKSUSOWY CIEMNY GRADIENT) -->
+    <!-- SECTION: CALL TO ACTION -->
     <section class="max-w-6xl mx-auto px-6 pb-24">
         <div class="dark-cta-gradient text-[#FAF8F5] rounded-[40px] p-10 md:p-20 text-left relative overflow-hidden">
             <span class="text-[9px] font-bold text-[#A59B90] tracking-widest uppercase block mb-6">POROZMAWIAJMY</span>
