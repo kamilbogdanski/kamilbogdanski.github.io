@@ -1,168 +1,441 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kamil Bogdański | UX Writing &amp; SEO Copywriting</title>
-<meta name="description" content="Copywriter SEO i UX Writer z 6-letnim doświadczeniem. Projektuję treści, które karmią algorytmy i inspirują ludzi.">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamil Bogdański — Portfolio</title>
+    <!-- Tailwind CSS dla precyzyjnego pozycjonowania i nowoczesnego gridu -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Outfit i Figtree -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Outfit', 'Figtree', sans-serif;
+            background-color: #FAF8F5; /* Warm off-white */
+            color: #2E221C; /* Deep warm charcoal/chocolate */
+        }
+        
+        /* Animacja nieskończonego przesuwania paska z technologiami */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+
+        /* 
+           --- LUKSUSOWE EFEKTY GRADIENTOWE (WARM MINIMALISM) ---
+        */
+        
+        /* Delikatny gradient tła dla całej sekcji Hero - efekt świetlistości */
+        .hero-glow-bg {
+            background: radial-gradient(circle at 80% 20%, rgba(242, 236, 225, 0.45) 0%, rgba(250, 248, 245, 0) 60%);
+        }
+
+        /* Gradient dla kart neomorficznych 3D - efekt gipsu i piasku */
+        .card-warm-gradient {
+            background: linear-gradient(145deg, #FAF8F5 0%, #F2ECE1 100%);
+            box-shadow: 
+                -8px -8px 25px rgba(255, 255, 255, 0.95), 
+                10px 10px 30px rgba(46, 34, 28, 0.05),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.6);
+        }
+
+        /* Wewnętrzny gradient w makiecie UI dający efekt głębi */
+        .ui-mock-gradient {
+            background: linear-gradient(135deg, #F5EFE4 0%, #EAE1D3 100%);
+            box-shadow: 
+                inset 1px 1px 4px rgba(255, 255, 255, 0.5),
+                inset -1px -1px 4px rgba(46, 34, 28, 0.02);
+        }
+
+        /* Płynny, aksamitny gradient dla ciemnego CTA z poświatą luksusowego brązu */
+        .dark-cta-gradient {
+            background: linear-gradient(135deg, #2E221C 0%, #201612 50%, #150E0B 100%);
+            box-shadow: 
+                0 30px 60px rgba(21, 14, 11, 0.25),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Miękka poświata dla przycisków i wyróżnień */
+        .button-shadow {
+            box-shadow: 0 4px 15px rgba(46, 34, 28, 0.08);
+        }
+    </style>
 </head>
-<body>
- 
-<header>
-  <nav class="nav">
-    <a href="index.html" class="logo">K/B</a>
-    <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false" id="navToggle"><span></span></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#hero">Start</a></li>
-      <li><a href="uslugi.html">Usługi</a></li>
-      <li><a href="#about">O mnie</a></li>
-      <li><a href="#contact" class="nav-cta">Rozpocznij projekt</a></li>
-    </ul>
-  </nav>
-</header>
- 
-<main>
- 
-  <section class="hero" id="hero">
-    <div class="wrap">
-      <p class="eyebrow hero-eyebrow">Copywriter SEO &amp; UX Writer</p>
-      <h1 class="hero-title">Projektuję <span class="mark">treści</span>, które karmią <span class="mark">algorytmy</span> i inspirują ludzi</h1>
-      <p class="hero-lede">W świecie zdominowanym przez generyczny content stawiam na jakość, którą docenią zarówno ludzie, jak i systemy AI. Optymalizuję architekturę informacji i język korzyści.</p>
- 
-      <div class="serp" aria-hidden="true">
-        <div class="serp-url">kamilbogdanski.github.io</div>
-        <div class="serp-title">Kamil Bogdański — treści, które konwertują i rankują</div>
-        <div class="serp-desc">SEO Copywriting, UX Writing i audyty treści. 6+ lat doświadczenia, 100 tys.+ artykułów, 10 mln+ znaków ze spacjami.</div>
-      </div>
- 
-      <p class="stack">
-        <span>WordPress</span><span>Elementor</span><span>SurferSEO</span><span>Claude</span><span>Gemini</span><span>ChatGPT</span><span>Suno</span><span>CSS / HTML</span>
-      </p>
-    </div>
-  </section>
- 
-  <section id="services-preview">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Co robię?</p>
-        <h2>Trzy filary, jeden cel — treść, która pracuje</h2>
-      </div>
-      <div class="services">
-        <div class="service-card">
-          <span class="service-tag">UX</span>
-          <h3>UX Writing</h3>
-          <p>Świetny design przyciąga wzrok, ale to słowa prowadzą użytkownika za rękę. Pomagam markom wypełnić interfejs treścią, która jest intuicyjna, pomocna i ludzka — od mikrocopy na przyciskach, przez komunikaty błędów, aż po puste stany.</p>
+<body class="overflow-x-hidden hero-glow-bg">
+
+    <!-- NAVBAR -->
+    <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#E9E1D3] flex items-center justify-center overflow-hidden shadow-sm">
+                <svg class="w-6 h-6" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 33.5 33.5 C 19 48 19 71 33.5 85.5 C 48 100 71 100 85.5 85.5 C 100 71 100 48 85.5 33.5 C 75.5 23.5 61.5 20 48.5 23" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 30 43 L 53 66" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 39 34 L 62 57" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 48 25 C 53.5 30.5 54 33 66 45" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 59.5 69.5 L 75 75 L 69.5 59.5 Z" fill="#2E221C"/>
+                </svg>
+            </div>
+            <span class="font-medium text-[15px] tracking-tight">Kamil Bogdański</span>
         </div>
-        <div class="service-card">
-          <span class="service-tag">SEO</span>
-          <h3>SEO Copywriting</h3>
-          <p>Dobry copywriter SEO wie, gdzie ukryć frazę kluczową, by nie zakłócić przyjemności z czytania. Ja idę o krok dalej — tworzę treści, które karmią algorytmy i inspirują odbiorców. Pomagam Twojej marce rozkwitnąć w wynikach wyszukiwania.</p>
-        </div>
-        <div class="service-card">
-          <span class="service-tag">AUDIT</span>
-          <h3>Audyty techniczne</h3>
-          <p>Nawet najpiękniejszy design nie obroni się bez technicznego zaplecza. Mój audyt uwzględnia przegląd trzech filarów: jakości treści, intuicyjności interfejsu oraz optymalizacji konwersji.</p>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <section class="quote">
-    <div class="wrap">
-      <blockquote>
-        „Marketing to nie bitwa na produkty. To bitwa na percepcję.”
-        <span>— Al Ries</span>
-      </blockquote>
-      <p class="quote-body">Percepcja to suma wszystkich doświadczeń, jakie użytkownik ma z Twoją stroną. Od jasności komunikatu w procesie zakupu, po widoczność Twoich rozwiązań w sieci. Łączę technologiczną poprawność SEO z empatią UX Writingu, by Twój produkt po prostu zarabiał. Pomagam markom brzmieć profesjonalnie tam, gdzie liczy się każde kliknięcie.</p>
-    </div>
-  </section>
- 
-  <section id="about">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">O mnie</p>
-        <h2>6 lat praktyki, jedno podejście</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-col">
-          <p class="eyebrow">Fundament</p>
-          <p>Solidny fundament zbudowałem podczas pracy dla czołowych agencji digitalowych w Polsce — m.in. Verseo, Euvic Digital i Trust Luna. To tam uczyłem się, jak łączyć cele biznesowe z realnymi potrzebami użytkowników na ogromną skalę.</p>
-        </div>
-        <div class="about-col">
-          <p class="eyebrow">Synergia</p>
-          <p>Łączę UX i SEO, tworząc treści, które pracują na wielu poziomach równocześnie. W pracy wykorzystuję zaawansowane narzędzia AI — Claude, Google Gemini i ChatGPT. Eksperymentuję też z produkcją muzyki w AI na własny użytek, co pozwala mi patrzeć na procesy kreatywne w sposób nieszablonowy.</p>
-        </div>
-        <div class="about-col">
-          <p class="eyebrow">Analiza</p>
-          <p>Wierzę, że liczby i piękno idą w parze. Przeprowadzając audyty stron www i aplikacji webowych, łączę chłodną analizę konwersji z pasją do designu — i dostarczam rekomendacje, które są nowoczesne, aktualne i skuteczne.</p>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <section id="stats-section">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Liczby</p>
-        <h2>Odkryj i zbuduj ze mną potencjał firmy</h2>
-      </div>
-      <p class="quote-body" style="margin-bottom:40px;">Łączę chłodną analizę konwersji z pasją do słowa. Wykorzystaj moją wiedzę z zakresu UX, SEO i audytu treści. Proste i przejrzyste zasady rozliczeń poprzez platformę Useme.</p>
-      <div class="stats">
+
+        <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-[#5E524C]">
+            <a href="#" class="hover:text-[#2E221C] transition-colors">Usługi</a>
+            <a href="#" class="hover:text-[#2E221C] transition-colors">O mnie</a>
+            <a href="#" class="hover:text-[#2E221C] transition-colors">Doświadczenie</a>
+            <a href="#" class="hover:text-[#2E221C] transition-colors">Kontakt</a>
+        </nav>
+
         <div>
-          <div class="stat-num">6+</div>
-          <div class="stat-label">lat doświadczenia</div>
+            <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 transition-opacity flex items-center gap-2 button-shadow">
+                Napisz do mnie <span class="text-[12px]">&#10142;</span>
+            </a>
         </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main class="max-w-7xl mx-auto px-6 pt-12 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- LEWA STRONA (Teksty) -->
+            <div class="lg:col-span-7 flex flex-col items-start">
+                <div class="inline-flex items-center gap-2 bg-[#F3EDE4] border border-[#FAF8F5] px-3 py-1.5 rounded-full text-[12px] font-semibold text-[#665B55] mb-8 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+                    Dostępny na projekty — Q3 2026
+                </div>
+
+                <h1 class="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight mb-6">
+                    Piszę słowa, <br>
+                    <span class="relative inline-block px-1">
+                        <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
+                        które pracują —
+                    </span><br>
+                    dla algorytmów <br>
+                    <span class="relative inline-block px-1">
+                        <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
+                        i dla ludzi.
+                    </span>
+                </h1>
+
+                <p class="text-[#5E524C] text-[16px] md:text-[18px] leading-relaxed max-w-xl mb-10 font-light">
+                    Copywriter SEO i UX writer z 6-letnim doświadczeniem. W świecie zdominowanym przez generyczny content stawiam na jakość, którą docenią zarówno ludzie, jak i systemy AI.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-8 py-4 rounded-full text-[15px] font-medium hover:opacity-95 transition-all hover:translate-y-[-1px] flex items-center gap-2 button-shadow">
+                        Rozpocznij projekt <span class="text-xs">&gt;</span>
+                    </a>
+                    <a href="#" class="border border-[#D9D1C5] text-[#2E221C] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-[#F3EDE4] transition-all hover:translate-y-[-1px]">
+                        Zobacz usługi
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRAWA STRONA (Makieta 3D z gradientem) -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                <div class="w-full max-w-[430px] ui-mock-gradient border border-[#E9E1D3] rounded-[40px] p-8 shadow-[0_25px_60px_rgba(46,34,28,0.06)] relative flex flex-col gap-5 min-h-[380px] justify-center">
+                    <span class="absolute top-5 right-6 text-[9px] font-bold text-[#A59B90] tracking-widest uppercase">Kamil // Design</span>
+                    
+                    <!-- Element UI 1 -->
+                    <div class="card-warm-gradient border border-white/60 rounded-2xl p-5">
+                        <span class="text-[9px] font-bold tracking-wider text-[#A1968A] block mb-1">PUSTY STAN</span>
+                        <p class="text-[14px] text-[#2E221C] font-semibold">Tu jeszcze pusto — dodaj pierwszy artykuł.</p>
+                    </div>
+
+                    <!-- Element UI 2 (CTA) -->
+                    <div class="self-end dark-cta-gradient text-[#FAF8F5] rounded-3xl py-4.5 px-10 transform translate-x-2">
+                        <span class="text-[13px] font-bold tracking-widest">CTA</span>
+                    </div>
+
+                    <!-- Element UI 3 -->
+                    <div class="card-warm-gradient border border-white/60 rounded-2xl p-5">
+                        <span class="text-[9px] font-bold tracking-wider text-[#A1968A] block mb-1">META TITLE</span>
+                        <p class="text-[14px] text-[#2E221C] font-semibold">Krem nawilżający z retinolem — recenzja & skład</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- HORIZONTAL SCROLL TICKER -->
+    <section class="w-full border-t border-b border-[#EBE3D5] bg-gradient-to-r from-[#FAF8F5] via-[#FDFDFD] to-[#FAF8F5] py-4 overflow-hidden relative">
+        <div class="flex whitespace-nowrap">
+            <div class="flex items-center gap-12 text-[13px] font-semibold text-[#8E8276] uppercase tracking-[4px] animate-marquee">
+                <span>Photoshop</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>WordPress</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>WooCommerce</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>Shopify</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>Elementor</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>SurferSEO</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>Claude</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>Gemini</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>ChatGPT</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>HTML/CSS</span> <span class="text-[#D3C7B9] font-light">+</span>
+            </div>
+            <div class="flex items-center gap-12 text-[13px] font-semibold text-[#8E8276] uppercase tracking-[4px] animate-marquee" aria-hidden="true">
+                <span>Photoshop</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>WordPress</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>WooCommerce</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>Shopify</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>Elementor</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>SurferSEO</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>Claude</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>Gemini</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>ChatGPT</span> <span class="text-[#D3C7B9] font-light">+</span>
+                <span>HTML/CSS</span> <span class="text-[#D3C7B9] font-light">+</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CO ROBIĘ HEADER -->
+    <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+        <span class="text-[11px] font-bold tracking-[5px] text-[#A3968A] uppercase block mb-4">CO ROBIĘ</span>
+        <h2 class="text-[32px] md:text-[44px] font-bold text-[#2E221C] tracking-tight max-w-2xl mx-auto leading-tight">
+            Trzy sposoby, w które słowa pracują dla Twojej marki.
+        </h2>
+    </section>
+
+    <!-- SECTION: TRZY SPOSOBY (USŁUGI ZIG-ZAG) -->
+    <section class="max-w-6xl mx-auto px-6 pb-32 flex flex-col gap-8">
+        
+        <!-- USŁUGA 01: UX Writing -->
+        <div class="bg-white border border-[#EBE3D5]/50 rounded-[32px] p-8 md:p-12 shadow-[0_15px_45px_rgba(46,34,28,0.02)] grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
+            <div class="md:col-span-5">
+                <div class="relative w-full aspect-[4/3] ui-mock-gradient border border-[#EBE3D5] rounded-2xl flex items-center justify-center overflow-hidden">
+                    <span class="absolute top-4 left-5 text-[9px] font-bold text-[#A59B90] tracking-widest uppercase">INTERFEJS</span>
+                    <span class="text-[100px] md:text-[120px] font-bold text-[#2E221C]/5 select-none tracking-tighter">01</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 flex flex-col justify-center">
+                <h3 class="text-[28px] md:text-[34px] font-bold text-[#2E221C] tracking-tight mb-4">UX Writing</h3>
+                <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed mb-6 font-light">
+                    Świetny design przyciąga wzrok, ale to słowa prowadzą użytkownika za rękę. Piszę mikrokopie, komunikaty błędów, puste stany i onboarding — tak, żeby brzmiały po ludzku.
+                </p>
+                <ul class="space-y-3 text-[14px] font-medium text-[#5E524C]">
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30"></span>
+                        Mikrokopie w przyciskach i formularzach
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30"></span>
+                        Komunikaty błędów i puste stany
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30"></span>
+                        Onboarding i tooltips
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- USŁUGA 02: SEO Copywriting -->
+        <div class="bg-white border border-[#EBE3D5]/50 rounded-[32px] p-8 md:p-12 shadow-[0_15px_45px_rgba(46,34,28,0.02)] grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
+            <div class="md:col-span-7 order-2 md:order-1 flex flex-col justify-center">
+                <h3 class="text-[28px] md:text-[34px] font-bold text-[#2E221C] tracking-tight mb-4">SEO Copywriting</h3>
+                <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed mb-6 font-light">
+                    Tworzę treści, które karmią algorytmy i inspirują odbiorców. Artykuły eksperckie, opisy produktowe, treści B2B. Frazy ukryte tak, by nie zakłócić przyjemności z czytania.
+                </p>
+                <ul class="space-y-3 text-[14px] font-medium text-[#5E524C]">
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30"></span>
+                        Artykuły eksperckie i sponsorowane
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30"></span>
+                        Opisy produktów i kategorii
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30"></span>
+                        Struktura nagłówków H1-H3
+                    </li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-5 order-1 md:order-2">
+                <div class="relative w-full aspect-[4/3] ui-mock-gradient border border-[#EBE3D5] rounded-2xl flex items-center justify-center overflow-hidden">
+                    <span class="absolute top-4 left-5 text-[9px] font-bold text-[#A59B90] tracking-widest uppercase">WIDOCZNOŚĆ</span>
+                    <span class="text-[100px] md:text-[120px] font-bold text-[#2E221C]/5 select-none tracking-tighter">02</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- USŁUGA 03: Audyty treści -->
+        <div class="bg-white border border-[#EBE3D5]/50 rounded-[32px] p-8 md:p-12 shadow-[0_15px_45px_rgba(46,34,28,0.02)] grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
+            <div class="md:col-span-5">
+                <div class="relative w-full aspect-[4/3] ui-mock-gradient border border-[#EBE3D5] rounded-2xl flex items-center justify-center overflow-hidden">
+                    <span class="absolute top-4 left-5 text-[9px] font-bold text-[#A59B90] tracking-widest uppercase">ANALIZA</span>
+                    <span class="text-[100px] md:text-[120px] font-bold text-[#2E221C]/5 select-none tracking-tighter">03</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 flex flex-col justify-center">
+                <h3 class="text-[28px] md:text-[34px] font-bold text-[#2E221C] tracking-tight mb-4">Audyty treści</h3>
+                <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed mb-6 font-light">
+                    Sprawdzam trzy filary: jakość treści, intuicyjność interfejsu i optymalizację konwersji. Wskazuję konkretne miejsca, w których słowa kosztują Cię klientów.
+                </p>
+                <ul class="space-y-3 text-[14px] font-medium text-[#5E524C]">
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30"></span>
+                        Audyt content + UX writing
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30"></span>
+                        Rekomendacje pod konwersję
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30"></span>
+                        Fact-checking i proofreading
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FILOZOFIA (CYTAT) -->
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="bg-[#F2ECE1] border border-[#EBE3D5] rounded-[32px] p-10 md:p-16 text-left relative overflow-hidden">
+            <span class="text-[9px] font-bold text-[#A59B90] tracking-widest uppercase block mb-6">FILOZOFIA</span>
+            <h2 class="text-[28px] md:text-[44px] font-bold text-[#2E221C] leading-[1.2] tracking-tight mb-4">
+                „Marketing to nie bitwa na produkty. To<br class="hidden md:inline">
+                bitwa na 
+                <span class="relative inline-block px-1">
+                    <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
+                    percepcję.
+                </span>”
+            </h2>
+            <p class="text-[11px] font-bold text-[#8E8276] uppercase tracking-wider mb-8">— AL RIES</p>
+            <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed max-w-2xl font-light">
+                Percepcja to suma wszystkich doświadczeń, jakie użytkownik ma z Twoją marką. Łączę techniczną poprawność SEO z empatią UX writingu — tak, żeby produkt po prostu zarabiał.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION: O MNIE (STATYSTYKI Z GRADIENTEM) -->
+    <section class="max-w-6xl mx-auto px-6 pb-32 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <!-- LEWA STRONA: WARM NEUMORPHIC STATS -->
+        <div class="lg:col-span-5 bg-[#F2ECE1] border border-[#EBE3D5] rounded-[32px] p-8 flex flex-col gap-6 shadow-sm">
+            <div class="bg-white rounded-full py-2.5 px-6 border border-[#E9E1D3] text-center self-start shadow-sm">
+                <span class="text-[9px] font-bold text-[#2E221C] tracking-widest uppercase">AUTOR — KAMIL BOGDAŃSKI</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="col-span-2 card-warm-gradient border border-white/40 rounded-2xl p-6 flex flex-col justify-between min-h-[110px]">
+                    <span class="text-[44px] font-bold text-[#2E221C] block leading-none mb-2">6+</span>
+                    <span class="text-[9px] font-bold text-[#8E8276] tracking-wider uppercase">Lat praktyki</span>
+                </div>
+
+                <div class="card-warm-gradient border border-white/40 rounded-2xl p-6 flex flex-col justify-between min-h-[110px]">
+                    <span class="text-[32px] font-bold text-[#2E221C] block leading-none mb-2">100k+</span>
+                    <span class="text-[9px] font-bold text-[#8E8276] tracking-wider uppercase">Artykułów</span>
+                </div>
+
+                <div class="dark-cta-gradient text-[#FAF8F5] rounded-2xl p-6 flex flex-col justify-between min-h-[110px]">
+                    <span class="text-[32px] font-bold text-[#FAF8F5] block leading-none mb-2">10M+</span>
+                    <span class="text-[9px] font-bold text-[#A59B90] tracking-wider uppercase">Znaków</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRAWA STRONA -->
+        <div class="lg:col-span-7 flex flex-col items-start justify-center">
+            <span class="text-[9px] font-bold text-[#A59B90] tracking-widest uppercase block mb-4">O MNIE</span>
+            <h3 class="text-[32px] md:text-[44px] font-bold text-[#2E221C] leading-[1.1] tracking-tight mb-6">
+                Piszę od sześciu lat — dla ludzi i dla algorytmów.
+            </h3>
+            <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed mb-6 font-light">
+                Solidny fundament zbudowałem w czołowych agencjach digitalowych w Polsce — Semhead, Verseo, Trust Luna, Euvic Digital i Harbingers. To tam nauczyłem się łączyć cele biznesowe z realnymi potrzebami użytkowników na dużą skalę.
+            </p>
+            <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed font-light">
+                W codziennej pracy sięgam po Claude, Gemini i ChatGPT — nie po to, żeby zastąpić redakcję, ale żeby pisać szybciej i celniej. Prywatnie eksperymentuję z produkcją muzyki w AI, co uczy mnie patrzeć na procesy kreatywne wielowymiarowo.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION: DOŚWIADCZENIE -->
+    <section class="max-w-6xl mx-auto px-6 pb-32">
+        <div class="flex flex-col gap-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-6 border-b border-[#EBE3D5] text-left">
+                <span class="text-[20px] font-semibold text-[#2E221C]">Crossweb</span>
+                <span class="text-[14px] text-[#8E8276] mt-1 sm:mt-0">UX Writer / SEO Copywriter</span>
+                <span class="text-[14px] font-medium text-[#2E221C] mt-1 sm:mt-0">2024 — obecnie</span>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-6 border-b border-[#EBE3D5] text-left">
+                <span class="text-[20px] font-semibold text-[#2E221C]">Trust Luna</span>
+                <span class="text-[14px] text-[#8E8276] mt-1 sm:mt-0">SEO Copywriter</span>
+                <span class="text-[14px] font-medium text-[#2E221C] mt-1 sm:mt-0">2023 — 2024</span>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-6 border-b border-[#EBE3D5] text-left">
+                <span class="text-[20px] font-semibold text-[#2E221C]">Euvic Digital</span>
+                <span class="text-[14px] text-[#8E8276] mt-1 sm:mt-0">Content Writer B2B</span>
+                <span class="text-[14px] font-medium text-[#2E221C] mt-1 sm:mt-0">2022 — 2023</span>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between py-6 border-b border-[#EBE3D5] text-left">
+                <span class="text-[20px] font-semibold text-[#2E221C]">Verseo</span>
+                <span class="text-[14px] text-[#8E8276] mt-1 sm:mt-0">SEO Content Writer</span>
+                <span class="text-[14px] font-medium text-[#2E221C] mt-1 sm:mt-0">2021 — 2022</span>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2.5 mt-10">
+            <span class="bg-[#F2ECE1] text-[#665B55] text-[11px] font-medium px-4 py-2 rounded-full border border-white/60 shadow-sm">Semhead</span>
+            <span class="bg-[#F2ECE1] text-[#665B55] text-[11px] font-medium px-4 py-2 rounded-full border border-white/60 shadow-sm">Verseo</span>
+            <span class="bg-[#F2ECE1] text-[#665B55] text-[11px] font-medium px-4 py-2 rounded-full border border-white/60 shadow-sm">Trust Luna</span>
+            <span class="bg-[#F2ECE1] text-[#665B55] text-[11px] font-medium px-4 py-2 rounded-full border border-white/60 shadow-sm">Euvic Digital</span>
+            <span class="bg-[#F2ECE1] text-[#665B55] text-[11px] font-medium px-4 py-2 rounded-full border border-white/60 shadow-sm">Harbingers</span>
+            <span class="bg-[#F2ECE1] text-[#665B55] text-[11px] font-medium px-4 py-2 rounded-full border border-white/60 shadow-sm">Crossweb</span>
+        </div>
+    </section>
+
+    <!-- SECTION: CALL TO ACTION (LUKSUSOWY CIEMNY GRADIENT) -->
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="dark-cta-gradient text-[#FAF8F5] rounded-[40px] p-10 md:p-20 text-left relative overflow-hidden">
+            <span class="text-[9px] font-bold text-[#A59B90] tracking-widest uppercase block mb-6">POROZMAWIAJMY</span>
+            
+            <h2 class="text-[32px] md:text-[56px] font-bold leading-[1.1] tracking-tight mb-6">
+                Zamień słowa w<br>
+                mierzalny 
+                <span class="relative inline-block px-1">
+                    <span class="absolute inset-x-0 h-[30%] bottom-1.5 -z-10 bg-white/10 rounded-sm"></span>
+                    wzrost.
+                </span>
+            </h2>
+            
+            <p class="text-[#D3C7B9] text-[15px] md:text-[16px] leading-relaxed max-w-xl mb-10 font-light">
+                Chłodna analiza konwersji plus pasja do słowa. Proste, przejrzyste zasady rozliczeń — również przez platformę Useme.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="tel:+48505189200" class="bg-[#FAF8F5] text-[#2E221C] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-[#FAF8F5]/90 transition-all hover:translate-y-[-1px] shadow-lg">
+                    +48 505 189 200
+                </a>
+                <a href="#" class="border border-[#D3C7B9]/40 text-[#FAF8F5] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-white/5 transition-all hover:translate-y-[-1px]">
+                    Useme
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto px-6 py-10 border-t border-[#EBE3D5] flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#8E8276]">
         <div>
-          <div class="stat-num">100 tys.+</div>
-          <div class="stat-label">stworzonych artykułów</div>
+            &copy; 2026 Kamil Bogdański. Wszystkie prawa zastrzeżone.
         </div>
-        <div>
-          <div class="stat-num">10 mln+</div>
-          <div class="stat-label">napisanych znaków ze spacjami</div>
+        <div class="flex items-center gap-6">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#2E221C] transition-colors">LinkedIn</a>
+            <a href="mailto:kontakt@kamilbogdanski.pl" class="hover:text-[#2E221C] transition-colors">E-mail</a>
+            <span>Gdańsk, PL</span>
         </div>
-      </div>
-      <p style="margin-top:44px;">
-        <a href="https://useme.com/pl/roles/contractor/kamil-bogdanski,343476/" class="btn btn-ghost" target="_blank" rel="noopener">Znajdź mnie na Useme →</a>
-      </p>
-    </div>
-  </section>
- 
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <p class="eyebrow">Kontakt</p>
-      <h2>Porozmawiajmy</h2>
-      <div class="contact-links">
-        <a href="mailto:bogdanskikamil@gmail.com">bogdanskikamil@gmail.com</a>
-        <a href="tel:+48505989280">(+48) 505-989-280</a>
-        <a href="https://www.linkedin.com/in/kamilbogdanski/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </section>
- 
-</main>
- 
-<footer>
-  <div class="wrap footer-row">
-    <span>Copyright © KB 2026. Wszelkie prawa zastrzeżone.</span>
-    <span>Gdańsk, Polska</span>
-  </div>
-</footer>
- 
-<script>
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
- 
+    </footer>
+
 </body>
 </html>
