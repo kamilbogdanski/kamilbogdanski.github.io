@@ -28,7 +28,7 @@
         }
 
         /* 
-           --- LUKSUSOWE EFEKTY GRADIENTOWE (WARM MINIMALISM) ---
+           --- LUKSUSOWE EFEKTY GRADIENTOWE TYLKO DLA KOLOROWYCH SEKCJI ---
         */
         
         /* Delikatny gradient tła dla całej sekcji Hero - efekt świetlistości */
@@ -61,9 +61,13 @@
                 inset 0 1px 1px rgba(255, 255, 255, 0.1);
         }
 
-        /* Miękka poświata dla przycisków i wyróżnień */
-        .button-shadow {
-            box-shadow: 0 4px 15px rgba(46, 34, 28, 0.08);
+        /* Przyciski płaskie (mniej świetliste, minimalistyczne, bez intensywnych cieni) */
+        .button-minimal {
+            box-shadow: none;
+            transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+        }
+        .button-minimal:hover {
+            transform: translateY(-1px);
         }
     </style>
 </head>
@@ -92,7 +96,7 @@
         </nav>
 
         <div>
-            <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 transition-opacity flex items-center gap-2 button-shadow">
+            <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 button-minimal flex items-center gap-2">
                 Napisz do mnie <span class="text-[12px]">&#10142;</span>
             </a>
         </div>
@@ -123,14 +127,14 @@
                 </h1>
 
                 <p class="text-[#5E524C] text-[16px] md:text-[18px] leading-relaxed max-w-xl mb-10 font-light">
-                    Copywriter SEO i UX writer z 6-letnim doświadczeniem. W świecie zdominowanym przez generyczny content stawiam na jakość, którą docenią zarówno ludzie, jak i systemy AI.
+                    Copywriter SEO i UX writer z 6-letnim doświadczeniem. W świecie zdominowanym przez generyczny content stawiam na quality, którą docenią zarówno ludzie, jak i systemy AI.
                 </p>
 
                 <div class="flex flex-wrap items-center gap-4">
-                    <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-8 py-4 rounded-full text-[15px] font-medium hover:opacity-95 transition-all hover:translate-y-[-1px] flex items-center gap-2 button-shadow">
+                    <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-8 py-4 rounded-full text-[15px] font-medium hover:opacity-95 button-minimal flex items-center gap-2">
                         Rozpocznij projekt <span class="text-xs">&gt;</span>
                     </a>
-                    <a href="#" class="border border-[#D9D1C5] text-[#2E221C] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-[#F3EDE4] transition-all hover:translate-y-[-1px]">
+                    <a href="#" class="border border-[#D9D1C5] text-[#2E221C] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-[#F3EDE4] button-minimal">
                         Zobacz usługi
                     </a>
                 </div>
@@ -415,10 +419,10 @@
             </p>
 
             <div class="flex flex-wrap items-center gap-4">
-                <a href="tel:+48505189200" class="bg-[#FAF8F5] text-[#2E221C] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-[#FAF8F5]/90 transition-all hover:translate-y-[-1px] shadow-lg">
+                <a href="tel:+48505189200" class="bg-[#FAF8F5] text-[#2E221C] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-[#FAF8F5]/90 button-minimal">
                     +48 505 189 200
                 </a>
-                <a href="#" class="border border-[#D3C7B9]/40 text-[#FAF8F5] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-white/5 transition-all hover:translate-y-[-1px]">
+                <a href="#" class="border border-[#D3C7B9]/40 text-[#FAF8F5] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-white/5 button-minimal">
                     Useme
                 </a>
             </div>
