@@ -1,3 +1,43 @@
+/* Tło i ogólny klimat strony */
+body {
+    background-color: #FAF8F5 !important;
+    color: #2E221C !important;
+}
+
+/* Duża makieta po prawej stronie (całkowicie bez ramki i cienia) */
+.ui-mock-gradient {
+    background: #F2ECE1 !important; /* Płaskie, ciepłe tło, które wtapia się w sekcję */
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Miękkie, neomorficzne, "gipsowe" karty wewnątrz makiety */
+.card-warm-gradient {
+    background: #FAF8F5 !important;
+    border: none !important;
+    box-shadow: 
+        -4px -4px 12px rgba(255, 255, 255, 0.95), 
+        6px 6px 18px rgba(46, 34, 28, 0.04),
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Brązowy, kontrastowy przycisk CTA wewnątrz makiety */
+.dark-cta-gradient {
+    background: #2E221C !important;
+    border: none !important;
+    box-shadow: 
+        6px 6px 18px rgba(46, 34, 28, 0.15),
+        inset 0px 1px 1px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Płaskie, minimalistyczne przyciski (bez świecenia) */
+.button-minimal {
+    box-shadow: none !important;
+    transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease !important;
+}
+.button-minimal:hover {
+    transform: translateY(-1px) !important;
+}
 /* Miękkie, neomorficzne kafelki (Jasne) */
 .card-warm-gradient {
     background: #FAF8F5 !important;
