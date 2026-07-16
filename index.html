@@ -74,98 +74,106 @@
 <body class="overflow-x-hidden hero-glow-bg">
 
     <!-- NAVBAR -->
-    <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#E9E1D3] flex items-center justify-center overflow-hidden shadow-sm">
-                <svg class="w-6 h-6" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M 33.5 33.5 C 19 48 19 71 33.5 85.5 C 48 100 71 100 85.5 85.5 C 100 71 100 48 85.5 33.5 C 75.5 23.5 61.5 20 48.5 23" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M 30 43 L 53 66" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M 39 34 L 62 57" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M 48 25 C 53.5 30.5 54 33 66 45" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M 59.5 69.5 L 75 75 L 69.5 59.5 Z" fill="#2E221C"/>
-                </svg>
-            </div>
-            <span class="font-medium text-[15px] tracking-tight">Kamil Bogdański</span>
+<header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <!-- Logo / Avatar -->
+    <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#E9E1D3] flex items-center justify-center overflow-hidden shadow-sm">
+            <svg class="w-6 h-6" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 33.5 33.5 C 19 48 19 71 33.5 85.5 C 48 100 71 100 85.5 85.5 C 100 71 100 48 85.5 33.5 C 75.5 23.5 61.5 20 48.5 23" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                <path d="M 30 43 L 53 66" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                <path d="M 39 34 L 62 57" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                <path d="M 48 25 C 53.5 30.5 54 33 66 45" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                <path d="M 59.5 69.5 L 75 75 L 69.5 59.5 Z" fill="#2E221C"/>
+            </svg>
         </div>
+        <span class="font-medium text-[15px] tracking-tight">Kamil Bogdański</span>
+    </div>
 
-        <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-[#5E524C]">
-            <a href="#" class="hover:text-[#2E221C] transition-colors">Usługi</a>
-            <a href="#" class="hover:text-[#2E221C] transition-colors">O mnie</a>
-            <a href="#" class="hover:text-[#2E221C] transition-colors">Doświadczenie</a>
-            <a href="#" class="hover:text-[#2E221C] transition-colors">Kontakt</a>
-        </nav>
+    <!-- Menu nawigacji -->
+    <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-[#5E524C]">
+        <a href="#" class="hover:text-[#2E221C] transition-colors">Usługi</a>
+        <a href="#" class="hover:text-[#2E221C] transition-colors">O mnie</a>
+        <a href="#" class="hover:text-[#2E221C] transition-colors">Doświadczenie</a>
+        <a href="#" class="hover:text-[#2E221C] transition-colors">Kontakt</a>
+    </nav>
 
-        <div>
-            <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 button-minimal flex items-center gap-2">
-                Napisz do mnie <span class="text-[12px]">&#10142;</span>
-            </a>
-        </div>
-    </header>
+    <!-- Przycisk CTA -->
+    <div>
+        <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 button-minimal flex items-center gap-2">
+            Napisz do mnie <span class="text-[12px]">&#10142;</span>
+        </a>
+    </div>
+</header>
 
-    <!-- HERO SECTION -->
-    <main class="max-w-7xl mx-auto px-6 pt-12 pb-16">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <!-- LEWA STRONA (Teksty) -->
-            <div class="lg:col-span-7 flex flex-col items-start">
-                <div class="inline-flex items-center gap-2 bg-[#F3EDE4] border border-[#FAF8F5] px-3 py-1.5 rounded-full text-[12px] font-semibold text-[#665B55] mb-8 shadow-sm">
-                    <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
-                    Dostępny na projekty — Q3 2026
-                </div>
-
-                <h1 class="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight mb-6">
-                    Piszę słowa, <br>
-                    <span class="relative inline-block px-1">
-                        <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
-                        które pracują —
-                    </span><br>
-                    dla algorytmów <br>
-                    <span class="relative inline-block px-1">
-                        <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
-                        i dla ludzi.
-                    </span>
-                </h1>
-
-                <p class="text-[#5E524C] text-[16px] md:text-[18px] leading-relaxed max-w-xl mb-10 font-light">
-                    Copywriter SEO i UX writer z 6-letnim doświadczeniem. W świecie zdominowanym przez generyczny content stawiam na quality, którą docenią zarówno ludzie, jak i systemy AI.
-                </p>
-
-                <div class="flex flex-wrap items-center gap-4">
-                    <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-8 py-4 rounded-full text-[15px] font-medium hover:opacity-95 button-minimal flex items-center gap-2">
-                        Rozpocznij projekt <span class="text-xs">&gt;</span>
-                    </a>
-                    <a href="#" class="border border-[#D9D1C5] text-[#2E221C] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-[#F3EDE4] button-minimal">
-                        Zobacz usługi
-                    </a>
-                </div>
+<!-- HERO SECTION -->
+<main class="max-w-7xl mx-auto px-6 pt-12 pb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- LEWA STRONA (Teksty) -->
+        <div class="lg:col-span-7 flex flex-col items-start">
+            <!-- Badge statusu -->
+            <div class="inline-flex items-center gap-2 bg-[#F3EDE4] border border-[#FAF8F5] px-3 py-1.5 rounded-full text-[12px] font-semibold text-[#665B55] mb-8 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+                Dostępny na projekty — Q3 2026
             </div>
 
-            <!-- PRAWA STRONA (Makieta 3D z gradientem) -->
-            <div class="lg:col-span-5 flex justify-center lg:justify-end">
-                <div class="w-full max-w-[430px] ui-mock-gradient border border-[#E9E1D3] rounded-[40px] p-8 shadow-[0_25px_60px_rgba(46,34,28,0.06)] relative flex flex-col gap-5 min-h-[380px] justify-center">
-                    <span class="absolute top-5 right-6 text-[9px] font-bold text-[#A59B90] tracking-widest uppercase">Kamil // Design</span>
-                    
-                    <!-- Element UI 1 -->
-                    <div class="card-warm-gradient border border-white/60 rounded-2xl p-5">
-                        <span class="text-[9px] font-bold tracking-wider text-[#A1968A] block mb-1">PUSTY STAN</span>
-                        <p class="text-[14px] text-[#2E221C] font-semibold">Tu jeszcze pusto — dodaj pierwszy artykuł.</p>
-                    </div>
+            <!-- Główny nagłówek z markerem -->
+            <h1 class="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight mb-6">
+                Piszę słowa, <br>
+                <span class="relative inline-block px-1">
+                    <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
+                    które pracują —
+                </span><br>
+                dla algorytmów <br>
+                <span class="relative inline-block px-1">
+                    <span class="absolute inset-x-0 h-[45%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
+                    i dla ludzi.
+                </span>
+            </h1>
 
-                    <!-- Element UI 2 (CTA) -->
-                    <div class="self-end dark-cta-gradient text-[#FAF8F5] rounded-3xl py-4.5 px-10 transform translate-x-2">
-                        <span class="text-[13px] font-bold tracking-widest">CTA</span>
-                    </div>
+            <!-- Opis oferty -->
+            <p class="text-[#5E524C] text-[16px] md:text-[18px] leading-relaxed max-w-xl mb-10 font-light">
+                Copywriter SEO i UX writer z 6-letnim doświadczeniem. W świecie zdominowanym przez generyczny content stawiam na jakość, którą docenią zarówno ludzie, jak i systemy AI.
+            </p>
 
-                    <!-- Element UI 3 -->
-                    <div class="card-warm-gradient border border-white/60 rounded-2xl p-5">
-                        <span class="text-[9px] font-bold tracking-wider text-[#A1968A] block mb-1">META TITLE</span>
-                        <p class="text-[14px] text-[#2E221C] font-semibold">Krem nawilżający z retinolem — recenzja & skład</p>
-                    </div>
+            <!-- Przyciski akcji -->
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="#" class="bg-[#2E221C] text-[#FAF8F5] px-8 py-4 rounded-full text-[15px] font-medium hover:opacity-95 button-minimal flex items-center gap-2">
+                    Rozpocznij projekt <span class="text-xs">&gt;</span>
+                </a>
+                <a href="#" class="border border-[#D9D1C5] text-[#2E221C] px-8 py-4 rounded-full text-[15px] font-medium hover:bg-[#F3EDE4] button-minimal">
+                    Zobacz usługi
+                </a>
+            </div>
+        </div>
+
+        <!-- PRAWA STRONA (Makieta 3D - Całkowicie płaska ramka, miękkie karty) -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <div class="w-full max-w-[430px] ui-mock-gradient rounded-[40px] p-8 relative flex flex-col gap-5 min-h-[380px] justify-center">
+                <!-- Techniczny tag w rogu -->
+                <span class="absolute top-5 right-6 text-[9px] font-bold text-[#A59B90] tracking-widest uppercase">Kamil // Design</span>
+                
+                <!-- Pusty Stan (Miękka, bezramkowa karta) -->
+                <div class="card-warm-gradient rounded-2xl p-5">
+                    <span class="text-[9px] font-bold tracking-wider text-[#A1968A] block mb-1">PUSTY STAN</span>
+                    <p class="text-[14px] text-[#2E221C] font-semibold">Tu jeszcze pusto — dodaj pierwszy artykuł.</p>
+                </div>
+
+                <!-- CTA (Ciemny, płaski przycisk) -->
+                <div class="self-end dark-cta-gradient text-[#FAF8F5] rounded-3xl py-4 px-10 transform translate-x-2">
+                    <span class="text-[13px] font-bold tracking-widest">CTA</span>
+                </div>
+
+                <!-- Meta Title (Miękka, bezramkowa karta) -->
+                <div class="card-warm-gradient rounded-2xl p-5">
+                    <span class="text-[9px] font-bold tracking-wider text-[#A1968A] block mb-1">META TITLE</span>
+                    <p class="text-[14px] text-[#2E221C] font-semibold">Krem nawilżający z retinolem — recenzja & skład</p>
                 </div>
             </div>
-
         </div>
-    </main>
+
+    </div>
+</main>
 
     <!-- HORIZONTAL SCROLL TICKER -->
     <section class="w-full border-t border-b border-[#EBE3D5] bg-gradient-to-r from-[#FAF8F5] via-[#FDFDFD] to-[#FAF8F5] py-4 overflow-hidden relative">
