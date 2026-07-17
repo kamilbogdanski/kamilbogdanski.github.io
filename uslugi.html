@@ -3,97 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Usługi | Kamil Bogdański</title>
-    <!-- Podpinamy ten sam plik CSS co na stronie głównej -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Podpinamy te same czcionki z Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>O mnie — Kamil Bogdański</title>
+    <!-- Tailwind CSS dla precyzyjnego pozycjonowania i nowoczesnego gridu -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Outfit i Figtree -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Outfit', 'Figtree', sans-serif;
+            background-color: #FAF8F5; /* Warm off-white */
+            color: #2E221C; /* Deep warm charcoal/chocolate */
+        }
+
+        /* Białe kafelki - całkowicie płaskie, gładkie, bez cieni i gradientów na starcie */
+        .card-flat-smooth {
+            background: #FAF8F5 !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Przyciski całkowicie płaskie i minimalistyczne */
+        .button-minimal {
+            box-shadow: none !important;
+            transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease !important;
+        }
+        .button-minimal:hover {
+            transform: translateY(-1px) !important;
+        }
+    </style>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
-    <!-- GŁÓWNA NAWIGACJA -->
-    <nav class="navbar">
-        <div class="logo">K/B</div>
-        <ul class="nav-links">
-            <!-- Ważne: Link do Startu kieruje teraz do index.html -->
-            <li><a href="index.html">Start</a></li>
-            <li><a href="uslugi.html">Usługi</a></li>
-            <li><a href="index.html#about">O mnie</a></li>
-        </ul>
-        <a href="TUTAJ_LINK_DO_USEME" target="_blank" class="btn-glow">Rozpocznij projekt</a>
-    </nav>
+    <!-- NAVBAR -->
+    <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <!-- Logo / Avatar -->
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <div class="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#E9E1D3] flex items-center justify-center overflow-hidden shadow-sm">
+                <svg class="w-6 h-6" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 33.5 33.5 C 19 48 19 71 33.5 85.5 C 48 100 71 100 85.5 85.5 C 100 71 100 48 85.5 33.5 C 75.5 23.5 61.5 20 48.5 23" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 30 43 L 53 66" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 39 34 L 62 57" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 48 25 C 53.5 30.5 54 33 66 45" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 59.5 69.5 L 75 75 L 69.5 59.5 Z" fill="#2E221C"/>
+                </svg>
+            </div>
+            <span class="font-medium text-[15px] tracking-tight">Kamil Bogdański</span>
+        </a>
 
-    <!-- TUTAJ BĘDZIE TREŚĆ TWOJEJ PODSTRONY (Krok 4) -->
-    <main style="padding-top: 10rem; min-height: 70vh;">
-        <main style="padding-top: 10rem; min-height: 70vh;">
-        <section class="container fade-in" style="margin-bottom: 8rem;">
-            <h1>Czym się zajmuję?</h1>
-            <p style="max-width: 600px; margin-bottom: 4rem;">Projektuję treści, które łączą wymagania robotów wyszukiwarek z potrzebami żywych użytkowników. Wybierz obszar, który Cię interesuje, aby poznać szczegóły.</p>
+        <!-- Menu nawigacji -->
+        <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-[#5E524C]">
+            <a href="index.html" class="hover:text-[#2E221C] transition-colors">Usługi</a>
+            <a href="o-mnie.html" class="text-[#2E221C] transition-colors">O mnie</a>
+            <a href="index.html#doswiadczenie" class="hover:text-[#2E221C] transition-colors">Doświadczenie</a>
+            <a href="index.html#kontakt" class="hover:text-[#2E221C] transition-colors">Kontakt</a>
+        </nav>
 
-            <div class="faq-container">
+        <!-- Przycisk CTA -->
+        <div>
+            <a href="index.html#kontakt" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 button-minimal flex items-center gap-2">
+                Napisz do mnie <span class="text-[12px]">&#10142;</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- GŁÓWNA SEKCJA O MNIE -->
+    <main class="max-w-7xl mx-auto px-6 pt-12 pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            <!-- LEWA KOLUMNA: Manifest + Twoje Zdjęcie -->
+            <div class="lg:col-span-6 flex flex-col gap-10">
                 
-                <!-- Kafel 1 -->
-                <details class="faq-item" name="uslugi">
-                    <summary class="faq-summary">
-                        <h2>SEO Copywriting</h2>
-                        <span class="faq-icon">+</span>
-                    </summary>
-                    <div class="faq-content">
-                        <p>Tworzę teksty, które nie tylko rankują wysoko w Google, ale przede wszystkim angażują czytelnika. Korzystam z danych i narzędzi takich jak SurferSEO czy Senuto, aby precyzyjnie odpowiadać na intencje wyszukiwania (search intent). Moje artykuły to balans między nasyceniem frazami a naturalnym, eksperckim językiem, który buduje zaufanie do Twojej marki.</p>
+                <!-- Manifest -->
+                <div class="flex flex-col gap-6 text-left">
+                    <p class="text-[#5E524C] text-[16px] md:text-[17px] leading-relaxed font-light">
+                        Skoro świetna treść to najlepsze narzędzie sprzedaży na świecie, moją rolą jest zadbać o to, by Twój arsenał był bezkonkurencyjny. Nie tworzę wypełniaczy stron ani generycznych tekstów pod algorytmy. Projektuję komunikację, która jest strategicznym zasobem Twojej firmy.
+                    </p>
+                    
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-[18px] text-[#2E221C]">Co to oznacza w praktyce? Moje podejście to połączenie trzech perspektyw:</h4>
+                        <ul class="space-y-3.5 text-[15px] md:text-[16px] text-[#5E524C] font-light">
+                            <li class="flex items-start gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/40 mt-2.5 shrink-0"></span>
+                                <span><strong>biznesowej:</strong> rozumiem, że treść musi zarabiać. Każde słowo jest inwestycją, która ma budować autorytet i skracać proces decyzyjny klienta;</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/40 mt-2.5 shrink-0"></span>
+                                <span><strong>psychologicznej (UX):</strong> wykorzystuję zasady UX Writingu, aby komunikacja była płynna i intuicyjna. Usuwam tarcie tam, gdzie inni stawiają bariery;</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/40 mt-2.5 shrink-0"></span>
+                                <span><strong>technicznej (SEO):</strong> „karmię” algorytmy danymi, których szukają, nie tracąc przy tym ludzkiego, inspirującego charakteru marki.</span>
+                            </li>
+                        </ul>
                     </div>
-                </details>
 
-                <!-- Kafel 2 -->
-                <details class="faq-item" name="uslugi">
-                    <summary class="faq-summary">
-                        <h2>UX Writing</h2>
-                        <span class="faq-icon">+</span>
-                    </summary>
-                    <div class="faq-content">
-                        <p>Projektuję mikrocopy, które bezszelestnie prowadzi użytkownika za rękę. Od przycisków (CTA), przez komunikaty błędów, po formularze zakupowe. Skupiam się na obniżeniu wysiłku poznawczego, eliminacji frustracji i maksymalizacji konwersji. Gdzie inni widzą tylko "Zapisz się", ja widzę szansę na uspokojenie obaw klienta i przyspieszenie decyzji.</p>
-                    </div>
-                </details>
+                    <p class="text-[#5E524C] text-[16px] md:text-[17px] leading-relaxed font-light">
+                        Wierzę, że w dobie AI wygrywają te marki, które potrafią opowiedzieć swoją wartość w sposób precyzyjny i autentyczny. Pomagam Ci stać się eksperckim źródłem wiedzy w Twojej branży.
+                    </p>
+                </div>
 
-                <!-- Kafel 3 -->
-                <details class="faq-item" name="uslugi">
-                    <summary class="faq-summary">
-                        <h2>Audyty Contentowe & Strategia</h2>
-                        <span class="faq-icon">+</span>
-                    </summary>
-                    <div class="faq-content">
-                        <p>Przeprowadzam dogłębne analizy treści na stronach www i w aplikacjach. Wyłapuję wąskie gardła komunikacyjne, niespójności w architekturze informacji i błędy językowe. Otrzymujesz ode mnie konkretny, spriorytetyzowany raport z rekomendacjami, co i jak poprawić, aby Twoje cyfrowe produkty natychmiast zaczęły lepiej "rozmawiać" z klientami.</p>
-                    </div>
-                </details>
-
-                <!-- Kafel 4 -->
-                <details class="faq-item" name="uslugi">
-                    <summary class="faq-summary">
-                        <h2>Opisy Produktów i Kategorii</h2>
-                        <span class="faq-icon">+</span>
-                    </summary>
-                    <div class="faq-content">
-                        <p>Zmieniam suche specyfikacje techniczne w opowieści o korzyściach. Projektuję karty produktów dla sklepów e-commerce, łącząc zasady webwritingu z psychologią sprzedaży. Sprawiam, że użytkownik dokładnie wie, dlaczego potrzebuje Twojego produktu, a wyszukiwarka łatwo odnajduje go w gąszczu konkurencji.</p>
-                    </div>
-                </details>
+                <!-- Twoje Zdjęcie portretowe -->
+                <div class="w-full rounded-[32px] overflow-hidden bg-[#F2ECE1]">
+                    <img src="kamil.jpg" alt="Kamil Bogdański" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
 
             </div>
-        </section>
-    </main>
+
+            <!-- PRAWA KOLUMNA: 4 Nowoczesne, Gładkie Kafelki w Piaskowej Ramce -->
+            <div class="lg:col-span-6 bg-[#F2ECE1] border border-[#EBE3D5] rounded-[40px] p-8 md:p-10 flex flex-col gap-6 shadow-sm">
+                
+                <div class="grid grid-cols-1 gap-6">
+                    
+                    <!-- Kafelek 1: Praktyka zbudowana u liderów branży -->
+                    <div class="card-flat-smooth rounded-[24px] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(46,34,28,0.05)]">
+                        <h4 class="text-[20px] md:text-[22px] font-bold text-[#2E221C] mb-4">Praktyka zbudowana u liderów branży</h4>
+                        <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
+                            Swoje kompetencje szlifowałem w czołowych agencjach SEO i digitalowych w Polsce (m.in. Semhead, Verseo, Trust Luna, Euvic Digital). Praca z setkami zróżnicowanych biznesów nauczyła mnie, jak dostarczać wyniki, które bronią się w arkuszach Excela oraz w zmiennej rzeczywistości rynkowej.
+                        </p>
+                    </div>
+
+                    <!-- Kafelek 2: Projektowanie dla ludzi i algorytmów -->
+                    <div class="card-flat-smooth rounded-[24px] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(46,34,28,0.05)]">
+                        <h4 class="text-[20px] md:text-[22px] font-bold text-[#2E221C] mb-4">Projektowanie dla ludzi i algorytmów</h4>
+                        <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
+                            Nie wierzę w wybór między widocznością a użytecznością. Łączę techniczny rygor SEO z empatią UX Writingu. Dzięki temu tworzę treści, które nie tylko przyciągają ruch z Google, ale realnie prowadzą użytkownika za rękę i eliminują bariery decyzyjne.
+                        </p>
+                    </div>
+
+                    <!-- Kafelek 3: Technologia w służbie precyzji -->
+                    <div class="card-flat-smooth rounded-[24px] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(46,34,28,0.05)]">
+                        <h4 class="text-[20px] md:text-[22px] font-bold text-[#2E221C] mb-4">Technologia w służbie precyzji</h4>
+                        <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
+                            Sprawnie wykorzystuję modele generatywne (Gemini, Claude) do optymalizacji procesów i podnoszenia jakości technicznej projektów. AI traktuję jako wzmacniacz mojej wiedzy, co pozwala mi na głębszą analizę danych i szybsze wdrażanie zaawansowanych struktur (FAQ/Schema).
+                        </p>
+                    </div>
+
+                    <!-- Kafelek 4: Strategia szyta na miarę -->
+                    <div class="card-flat-smooth rounded-[24px] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(46,34,28,0.05)]">
+                        <h4 class="text-[20px] md:text-[22px] font-bold text-[#2E221C] mb-4">Strategia szyta na miarę</h4>
+                        <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
+                            Unikam gotowych szablonów i sztywnych pakietów. Każdy projekt wyceniam i planuję indywidualnie, opierając się na audycie i realnych celach biznesowych. Skupiam się na dostarczaniu rozwiązań premium, które są spójne z estetyką marki i jej długofalową wizją.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
     </main>
 
-    <!-- STOPKA SKOPIOWANA ZE STRONY GŁÓWNEJ -->
-    <footer class="footer-section">
-        <h2 class="footer-title fade-in">Gotowy na zmianę?</h2>
-        <div class="footer-links fade-in">
-            <a href="mailto:bogdanskikamil1@gmail.com" class="hover-underline">bogdanskikamil1@gmail.com</a>
-            <span class="hover-underline">(+48) 505-909-288</span>
-            <a href="LINK_DO_LINKEDIN" target="_blank" class="hover-underline">LinkedIn</a>
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto px-6 py-10 border-t border-[#EBE3D5] flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#8E8276]">
+        <div>
+            &copy; 2026 Kamil Bogdański. Wszystkie prawa zastrzeżone.
+        </div>
+        <div class="flex items-center gap-6">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#2E221C] transition-colors">LinkedIn</a>
+            <a href="mailto:kontakt@kamilbogdanski.pl" class="hover:text-[#2E221C] transition-colors">E-mail</a>
+            <span>Gdańsk, PL</span>
         </div>
     </footer>
-    
-    <div class="copyright-bar">
-        <p>Copyright &copy; KB 2026. Wszelkie prawa zastrzeżone.</p>
-    </div>
 
 </body>
 </html>
