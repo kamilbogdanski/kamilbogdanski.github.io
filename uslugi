@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi — Kamil Bogdański</title>
+    <!-- Tailwind CSS dla precyzyjnego pozycjonowania i nowoczesnego gridu -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Outfit i Figtree -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Outfit', 'Figtree', sans-serif;
+            background-color: #FAF8F5; /* Warm off-white */
+            color: #2E221C; /* Deep warm charcoal/chocolate */
+        }
+
+        /* Białe kafelki - całkowicie płaskie, gładkie, bez cieni i gradientów na starcie */
+        .card-flat-smooth {
+            background: #FAF8F5 !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Przyciski całkowicie płaskie i minimalistyczne */
+        .button-minimal {
+            box-shadow: none !important;
+            transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease !important;
+        }
+        .button-minimal:hover {
+            transform: translateY(-1px) !important;
+        }
+
+        /* Stylizacja strzałek w FAQ */
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <!-- Logo / Avatar -->
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <div class="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#E9E1D3] flex items-center justify-center overflow-hidden shadow-sm">
+                <svg class="w-6 h-6" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 33.5 33.5 C 19 48 19 71 33.5 85.5 C 48 100 71 100 85.5 85.5 C 100 71 100 48 85.5 33.5 C 75.5 23.5 61.5 20 48.5 23" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 30 43 L 53 66" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 39 34 L 62 57" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 48 25 C 53.5 30.5 54 33 66 45" stroke="#2E221C" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M 59.5 69.5 L 75 75 L 69.5 59.5 Z" fill="#2E221C"/>
+                </svg>
+            </div>
+            <span class="font-medium text-[15px] tracking-tight">Kamil Bogdański</span>
+        </a>
+
+        <!-- Menu nawigacji -->
+        <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-[#5E524C]">
+            <a href="uslugi.html" class="text-[#2E221C] transition-colors">Usługi</a>
+            <a href="o-mnie.html" class="hover:text-[#2E221C] transition-colors">O mnie</a>
+            <a href="index.html#doswiadczenie" class="hover:text-[#2E221C] transition-colors">Doświadczenie</a>
+            <a href="index.html#kontakt" class="hover:text-[#2E221C] transition-colors">Kontakt</a>
+        </nav>
+
+        <!-- Przycisk CTA -->
+        <div>
+            <a href="index.html#kontakt" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 button-minimal flex items-center gap-2">
+                Napisz do mnie <span class="text-[12px]">&#10142;</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SEKCJA -->
+    <section class="max-w-7xl mx-auto px-6 pt-16 pb-20 text-center md:text-left">
+        <span class="text-[10px] font-bold tracking-[5px] text-[#A59B90] uppercase block mb-4">OFERTA</span>
+        <h1 class="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight mb-6 max-w-3xl">
+            Projektowanie treści <br class="hidden md:inline">
+            dla 
+            <span class="relative inline-block px-1">
+                <span class="absolute inset-x-0 h-[35%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
+                Twojego biznesu.
+            </span>
+        </h1>
+        <p class="text-[#5E524C] text-[16px] md:text-[18px] leading-relaxed max-w-xl font-light">
+            Od drobnych mikrokopii po kompleksowe strategie contentowe. Łączę techniczne SEO z empatią interfejsu, żeby pomóc Ci sprzedawać prościej i skuteczniej.
+        </p>
+    </section>
+
+    <!-- SZCZEGÓŁOWY ZAKRES USŁUG (3 GŁÓWNE FILARY) -->
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            
+            <!-- USŁUGA 1: UX WRITING -->
+            <div class="bg-[#F2ECE1] border border-[#EBE3D5] rounded-[32px] p-8 md:p-10 flex flex-col justify-between shadow-sm transition-all duration-300 hover:-translate-y-1">
+                <div>
+                    <span class="text-[10px] font-bold tracking-widest text-[#A59B90] uppercase block mb-6">PROJEKTOWANIE INTERFEJSU</span>
+                    <h3 class="text-[26px] font-bold text-[#2E221C] mb-4">UX Writing</h3>
+                    <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light mb-8">
+                        Dbanie o to, by słowa w aplikacji lub na stronie prowadziły użytkownika intuicyjnie. Usuwam tarcia decyzyjne i buduję czyste flow.
+                    </p>
+                    
+                    <div class="border-t border-[#EBE3D5] pt-6 mb-8">
+                        <span class="text-[11px] font-bold text-[#2E221C] uppercase tracking-wider block mb-4">Co dokładnie wchodzi w zakres:</span>
+                        <ul class="space-y-3.5 text-[14px] text-[#5E524C] font-light">
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Mikrokopie (przyciski, formularze, tooltipy)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Komunikaty o błędach i stany puste (empty states)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Ścieżki onboardingowe użytkownika
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Konsultacje UX na makietach Figma
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Standaryzacja języka marki (Tone of Voice)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="index.html#kontakt" class="bg-[#2E221C] text-[#FAF8F5] text-center py-3.5 rounded-2xl text-[14px] font-semibold hover:opacity-90 button-minimal block">
+                    Rozpocznij projekt
+                </a>
+            </div>
+
+            <!-- USŁUGA 2: SEO COPYWRITING -->
+            <div class="bg-[#F2ECE1] border border-[#EBE3D5] rounded-[32px] p-8 md:p-10 flex flex-col justify-between shadow-sm transition-all duration-300 hover:-translate-y-1">
+                <div>
+                    <span class="text-[10px] font-bold tracking-widest text-[#A59B90] uppercase block mb-6">WIDOCZNOŚĆ W GOOGLE</span>
+                    <h3 class="text-[26px] font-bold text-[#2E221C] mb-4">SEO Copywriting</h3>
+                    <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light mb-8">
+                        Treści, które budują pozycję lidera w wyszukiwarkach, sprytnie wkomponowując słowa kluczowe w płynną, wartościową dla ludzi narrację.
+                    </p>
+                    
+                    <div class="border-t border-[#EBE3D5] pt-6 mb-8">
+                        <span class="text-[11px] font-bold text-[#2E221C] uppercase tracking-wider block mb-4">Co dokładnie wchodzi w zakres:</span>
+                        <ul class="space-y-3.5 text-[14px] text-[#5E524C] font-light">
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Artykuły eksperckie, blogowe i sponsorowane
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Opisy produktów i kategorii (E-commerce)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Optymalizacja architektury nagłówków H1-H3
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Treści Landing Page pod kampanie reklamowe
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Dobór słów kluczowych i klastrowanie tematów
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="index.html#kontakt" class="bg-[#2E221C] text-[#FAF8F5] text-center py-3.5 rounded-2xl text-[14px] font-semibold hover:opacity-90 button-minimal block">
+                    Rozpocznij projekt
+                </a>
+            </div>
+
+            <!-- USŁUGA 3: AUDYTY TREŚCI -->
+            <div class="bg-[#F2ECE1] border border-[#EBE3D5] rounded-[32px] p-8 md:p-10 flex flex-col justify-between shadow-sm transition-all duration-300 hover:-translate-y-1">
+                <div>
+                    <span class="text-[10px] font-bold tracking-widest text-[#A59B90] uppercase block mb-6">ANALIZA KONWERSJI</span>
+                    <h3 class="text-[26px] font-bold text-[#2E221C] mb-4">Audyty treści</h3>
+                    <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light mb-8">
+                        Analiza obecnych tekstów na stronie pod kątem błędów językowych, widoczności w SEO oraz optymalizacji pod konwersję klienta.
+                    </p>
+                    
+                    <div class="border-t border-[#EBE3D5] pt-6 mb-8">
+                        <span class="text-[11px] font-bold text-[#2E221C] uppercase tracking-wider block mb-4">Co dokładnie wchodzi w zakres:</span>
+                        <ul class="space-y-3.5 text-[14px] text-[#5E524C] font-light">
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Audyt użyteczności językowej (UX Content)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Analiza widoczności i braków w treści (Gap Analysis)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Rekomendacje optymalizacji konwersji (CRO)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Korekta, proofreading i poprawa błędów
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/30 shrink-0"></span>
+                                Szczegółowy raport w formacie PDF / Google Doc
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="index.html#kontakt" class="bg-[#2E221C] text-[#FAF8F5] text-center py-3.5 rounded-2xl text-[14px] font-semibold hover:opacity-90 button-minimal block">
+                    Zamów audyt
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SEKCJA FAQ SPECJALISTYCZNEGO -->
+    <section class="max-w-4xl mx-auto px-6 pb-32">
+        <div class="flex flex-col gap-3 text-center md:text-left mb-10">
+            <span class="text-[9px] font-bold text-[#A59B90] tracking-widest uppercase block">FAQ</span>
+            <h2 class="text-[32px] font-bold text-[#2E221C] tracking-tight">Często zadawane pytania o treści</h2>
+        </div>
+
+        <div class="flex flex-col gap-4">
+            
+            <!-- PYTANIE 1: RÓŻNICA MIĘDZY SPRZEDAŻOWYM A UX WRITINGIEM -->
+            <details class="group bg-[#F2ECE1] border border-[#EBE3D5] rounded-2xl overflow-hidden transition-all duration-300">
+                <summary class="flex items-center justify-between p-6 font-semibold text-[16px] text-[#2E221C] cursor-pointer list-none select-none">
+                    Czym różni się klasyczny tekst sprzedażowy od UX writingu?
+                    <svg class="w-5 h-5 text-[#8E8276] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="px-6 pb-6 text-[#5E524C] text-[14px] leading-relaxed font-light border-t border-[#EBE3D5]/40 pt-4">
+                    Główną różnicą jest **cel oraz miejsce kontaktu z użytkownikiem**. Klasyczny copywriting (np. sprzedażowy Landing Page czy e-mail marketing) ma za zadanie przekonać, wywołać emocje i nakłonić do zakupu. Działa "przed" transakcją. 
+                    <br><br>
+                    Z kolei **UX writing** działa już wewnątrz produktu (formularze, koszyk, ekrany ustawień). Nie skupia się na perswazji, ale na **użyteczności i komforcie**. Jego zadaniem jest bezbłędne i bezwysiłkowe przeprowadzenie klienta przez proces (np. bezbłędna płatność), eliminując jakiekolwiek wątpliwości czy nieporozumienia techniczne.
+                </div>
+            </details>
+
+            <!-- PYTANIE 2: CO TO JEST ARTYKUŁ EKSPERCKI -->
+            <details class="group bg-[#F2ECE1] border border-[#EBE3D5] rounded-2xl overflow-hidden transition-all duration-300">
+                <summary class="flex items-center justify-between p-6 font-semibold text-[16px] text-[#2E221C] cursor-pointer list-none select-none">
+                    Czym jest artykuł ekspercki i dlaczego buduje sprzedaż?
+                    <svg class="w-5 h-5 text-[#8E8276] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="px-6 pb-6 text-[#5E524C] text-[14px] leading-relaxed font-light border-t border-[#EBE3D5]/40 pt-4">
+                    Artykuł ekspercki to głęboki, merytoryczny tekst, który nie tylko "odpowiada na zapytanie w Google", ale wyczerpuje temat i rozwiązuje realny problem Twojego odbiorcy. Buduje sprzedaż wielopoziomowo:
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>Pozycjonuje Twoją markę jako niekwestionowanego lidera i eksperta w swojej niszy rynkowej.</li>
+                        <li>Odpowiada na wątpliwości klienta na etapie edukacyjnym (zanim podejmie ostateczną decyzję).</li>
+                        <li>Google nagradza takie teksty wysokimi pozycjami dzięki wskaźnikowi E-E-A-T (Doświadczenie, Ekspertyza, Autorytet, Zaufanie).</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- PYTANIE 3: CZY OPTYMALIZACJA SEO NIE POPSUJE BRZMIENIA STRONY -->
+            <details class="group bg-[#F2ECE1] border border-[#EBE3D5] rounded-2xl overflow-hidden transition-all duration-300">
+                <summary class="flex items-center justify-between p-6 font-semibold text-[16px] text-[#2E221C] cursor-pointer list-none select-none">
+                    Czy optymalizacja pod wyszukiwarki (SEO) nie popsuje naturalnego brzmienia mojej strony?
+                    <svg class="w-5 h-5 text-[#8E8276] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="px-6 pb-6 text-[#5E524C] text-[14px] leading-relaxed font-light border-t border-[#EBE3D5]/40 pt-4">
+                    Absolutnie nie — a wręcz przeciwnie. Dawne czasy "upychania słów kluczowych" w nienaturalnych formach odeszły do lamusa. Dzisiejsze algorytmy Google (takie jak BERT czy MUM) są na tyle zaawansowane, że potrafią ocenić naturalną jakość i płynność tekstu. Moje podejście polega na integracji fraz kluczowych w sposób niemal niezauważalny dla czytelnika. Twoja strona będzie brzmieć autentycznie i płynnie, realizując przy tym rygorystyczne wymagania techniczne.
+                </div>
+            </details>
+
+            <!-- PYTANIE 4: CO DAJE AUDYT TREŚCI -->
+            <details class="group bg-[#F2ECE1] border border-[#EBE3D5] rounded-2xl overflow-hidden transition-all duration-300">
+                <summary class="flex items-center justify-between p-6 font-semibold text-[16px] text-[#2E221C] cursor-pointer list-none select-none">
+                    Co dokładnie zyskuję dzięki zleceniu audytu treści?
+                    <svg class="w-5 h-5 text-[#8E8276] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="px-6 pb-6 text-[#5E524C] text-[14px] leading-relaxed font-light border-t border-[#EBE3D5]/40 pt-4">
+                    Audyt treści to dokładne prześwietlenie Twoich obecnych materiałów. Otrzymujesz ode mnie gotowy raport wraz z tzw. "listą szybkich wygranych" (quick wins). Wskazuję w nim m.in.:
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>Gdzie użytkownik "gubi się" lub opuszcza koszyk przez niejasne komunikaty (UX).</li>
+                        <li>Które treści mają ukryty potencjał i po drobnej optymalizacji mogą wejść do TOP 10 Google (SEO).</li>
+                        <li>Jakie błędy językowe, stylistyczne lub logiczne obniżają profesjonalizm Twojej witryny.</li>
+                    </ul>
+                </div>
+            </details>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto px-6 py-10 border-t border-[#EBE3D5] flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#8E8276]">
+        <div>
+            &copy; 2026 Kamil Bogdański. Wszystkie prawa zastrzeżone.
+        </div>
+        <div class="flex items-center gap-6">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#2E221C] transition-colors">LinkedIn</a>
+            <a href="mailto:kontakt@kamilbogdanski.pl" class="hover:text-[#2E221C] transition-colors">E-mail</a>
+            <span>Gdańsk, PL</span>
+        </div>
+    </footer>
+
+</body>
+</html>
