@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt — Kamil Bogdański</title>
+    <!-- Tailwind CSS dla precyzyjnego pozycjonowania i nowoczesnego gridu -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Outfit i Figtree -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Outfit', 'Figtree', sans-serif;
+            background-color: #FAF8F5; /* Warm off-white */
+            color: #2E221C; /* Deep warm charcoal/chocolate */
+        }
+
+        /* Przyciski całkowicie płaskie i minimalistyczne */
+        .button-minimal {
+            box-shadow: none !important;
+            transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease !important;
+        }
+        .button-minimal:hover {
+            transform: translateY(-1px) !important;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <!-- Logo / Avatar (Z Twoim autorskim logotypem KB) -->
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <div class="w-10 h-10 rounded-full bg-white border border-[#E9E1D3] flex items-center justify-center overflow-hidden shadow-sm">
+                <img src="https://useme-prod-public.s3.amazonaws.com/avatars/076/343476_MK9RZ8D.png" alt="Kamil Bogdański - KB Logo" class="w-full h-full object-cover">
+            </div>
+            <span class="font-medium text-[15px] tracking-tight text-[#2E221C]">Kamil Bogdański</span>
+        </a>
+
+        <!-- Menu nawigacji -->
+        <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-[#5E524C]">
+            <a href="uslugi.html" class="hover:text-[#2E221C] transition-colors">Usługi</a>
+            <a href="o-mnie.html" class="hover:text-[#2E221C] transition-colors">O mnie</a>
+            <a href="index.html#doswiadczenie" class="hover:text-[#2E221C] transition-colors">Doświadczenie</a>
+            <a href="kontakt.html" class="text-[#2E221C] transition-colors">Kontakt</a>
+        </nav>
+
+        <!-- Przycisk CTA (aktywny na podstronie kontaktu) -->
+        <div>
+            <a href="mailto:bogdanskikamil@gmail.com" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 button-minimal flex items-center gap-2">
+                Napisz bezpośrednio <span class="text-[12px]">&#10142;</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- GŁÓWNA SEKCJA KONTAKTOWA -->
+    <main class="max-w-7xl mx-auto px-6 pt-16 pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            <!-- LEWA STRONA: Dane kontaktowe & Sociale -->
+            <div class="lg:col-span-5 flex flex-col text-left">
+                <span class="text-[10px] font-bold tracking-[5px] text-[#A59B90] uppercase block mb-4">KONTAKT</span>
+                <h1 class="text-[40px] md:text-[54px] font-bold leading-[1.1] tracking-tight text-[#2E221C] mb-6">
+                    Porozmawiajmy <br>
+                    o Twoim 
+                    <span class="relative inline-block px-1">
+                        <span class="absolute inset-x-0 h-[35%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
+                        projekcie.
+                    </span>
+                </h1>
+                
+                <p class="text-[#5E524C] text-[16px] md:text-[17px] leading-relaxed mb-10 font-light max-w-md">
+                    Szukasz wsparcia w zakresie UX writingu, audytu treści lub potrzebujesz artykułów eksperckich, które przełożą się na wyższą konwersję? Wypełnij formularz obok lub po prostu zadzwoń.
+                </p>
+
+                <!-- Dane bezpośrednie -->
+                <div class="flex flex-col gap-5 mb-10 text-[15px] md:text-[16px]">
+                    <a href="mailto:bogdanskikamil@gmail.com" class="flex items-center gap-4 text-[#5E524C] hover:text-[#2E221C] transition-colors group">
+                        <span class="w-10 h-10 rounded-full bg-[#F2ECE1] flex items-center justify-center text-[#2E221C] group-hover:bg-[#EADFCF] transition-colors">&#9993;</span>
+                        <span>bogdanskikamil@gmail.com</span>
+                    </a>
+                    
+                    <a href="tel:+48505189200" class="flex items-center gap-4 text-[#5E524C] hover:text-[#2E221C] transition-colors group">
+                        <span class="w-10 h-10 rounded-full bg-[#F2ECE1] flex items-center justify-center text-[#2E221C] group-hover:bg-[#EADFCF] transition-colors">&#9742;</span>
+                        <span>+48 505 189 200</span>
+                    </a>
+
+                    <div class="flex items-center gap-4 text-[#5E524C]">
+                        <span class="w-10 h-10 rounded-full bg-[#F2ECE1] flex items-center justify-center text-[#2E221C]">&#128205;</span>
+                        <span>Gdańsk, PL / Zdalnie</span>
+                    </div>
+                </div>
+
+                <!-- Bezpieczne linki do platform -->
+                <div class="border-t border-[#EBE3D5] pt-8">
+                    <span class="text-[11px] font-bold text-[#A59B90] tracking-wider uppercase block mb-4">ROZLICZENIA I SOCJALE</span>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://useme.com/pl/roles/contractor/kamil-bogdański,343476/" target="_blank" rel="noopener noreferrer" class="bg-[#F2ECE1] text-[#2E221C] px-5 py-2.5 rounded-full text-[13px] font-medium hover:bg-[#EADFCF] transition-colors shadow-sm">
+                            Profil Useme
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="bg-[#F2ECE1] text-[#2E221C] px-5 py-2.5 rounded-full text-[13px] font-medium hover:bg-[#EADFCF] transition-colors shadow-sm">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRAWA STRONA: Płaski, nowoczesny formularz Formspree -->
+            <div class="lg:col-span-7 bg-[#F2ECE1] border border-[#EBE3D5] rounded-[40px] p-8 md:p-10 shadow-sm w-full">
+                <!-- Podmień ID w miejscu "TWÓJ_IDENTYFIKATOR_FORMSPREE" po założeniu darmowego formularza na Formspree.io -->
+                <form action="https://formspree.io/f/TWÓJ_IDENTYFIKATOR_FORMSPREE" method="POST" class="flex flex-col gap-6">
+                    
+                    <!-- Imię i Nazwisko -->
+                    <div class="flex flex-col gap-2">
+                        <label for="name" class="text-[11px] font-bold text-[#8E8276] uppercase tracking-wider">Imię i nazwisko / Firma</label>
+                        <input type="text" name="name" id="name" required placeholder="np. Jan Kowalski" 
+                               class="w-full bg-[#FAF8F5] border border-transparent rounded-2xl py-4 px-5 text-[14px] text-[#2E221C] placeholder-[#A1968A] focus:outline-none focus:border-[#2E221C]/30 transition-colors">
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="flex flex-col gap-2">
+                        <label for="email" class="text-[11px] font-bold text-[#8E8276] uppercase tracking-wider">Twój e-mail</label>
+                        <input type="email" name="_replyto" id="email" required placeholder="np. jan@kowalski.pl" 
+                               class="w-full bg-[#FAF8F5] border border-transparent rounded-2xl py-4 px-5 text-[14px] text-[#2E221C] placeholder-[#A1968A] focus:outline-none focus:border-[#2E221C]/30 transition-colors">
+                    </div>
+
+                    <!-- Temat -->
+                    <div class="flex flex-col gap-2">
+                        <label for="subject" class="text-[11px] font-bold text-[#8E8276] uppercase tracking-wider">Temat wiadomości</label>
+                        <input type="text" name="subject" id="subject" required placeholder="np. Zapytanie o UX writing / Audyt treści" 
+                               class="w-full bg-[#FAF8F5] border border-transparent rounded-2xl py-4 px-5 text-[14px] text-[#2E221C] placeholder-[#A1968A] focus:outline-none focus:border-[#2E221C]/30 transition-colors">
+                    </div>
+
+                    <!-- Wiadomość -->
+                    <div class="flex flex-col gap-2">
+                        <label for="message" class="text-[11px] font-bold text-[#8E8276] uppercase tracking-wider">Treść wiadomości</label>
+                        <textarea name="message" id="message" rows="5" required placeholder="Napisz, jakich treści potrzebujesz lub jakie wyzwania stoją przed Twoim produktem..." 
+                                  class="w-full bg-[#FAF8F5] border border-transparent rounded-2xl py-4 px-5 text-[14px] text-[#2E221C] placeholder-[#A1968A] focus:outline-none focus:border-[#2E221C]/30 transition-colors resize-none"></textarea>
+                    </div>
+
+                    <!-- Przycisk Wyślij -->
+                    <button type="submit" class="bg-[#2E221C] text-[#FAF8F5] py-4.5 px-8 rounded-2xl text-[15px] font-semibold hover:opacity-95 button-minimal flex items-center justify-center gap-2 cursor-pointer">
+                        Wyślij wiadomość <span>&#10142;</span>
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto px-6 py-10 border-t border-[#EBE3D5] flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#8E8276]">
+        <div>
+            &copy; 2026 Kamil Bogdański. Wszystkie prawa zastrzeżone.
+        </div>
+        <div class="flex items-center gap-6">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#2E221C] transition-colors">LinkedIn</a>
+            <a href="mailto:kontakt@kamilbogdanski.pl" class="hover:text-[#2E221C] transition-colors">E-mail</a>
+            <span>Gdańsk, PL</span>
+        </div>
+    </footer>
+
+</body>
+</html>
