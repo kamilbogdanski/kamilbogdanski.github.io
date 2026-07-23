@@ -59,9 +59,9 @@
     </header>
 
     <!-- GŁÓWNA TREŚĆ STRONY -->
-    <main class="max-w-7xl mx-auto px-6 pt-12 pb-24 flex flex-col gap-20">
+    <main class="max-w-7xl mx-auto px-6 pt-12 pb-24 flex flex-col gap-24">
         
-        <!-- SEKCJA DWUKOLUMNOWA: TEKST O MNIE (LEWA) + KAFELKI (PRAWA) -->
+        <!-- SEKCJA DWUKOLUMNOWA: TEKST O MNIE (LEWA) + BENTO KAFELKI (PRAWA) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
             <!-- LEWA KOLUMNA: Cytat, Manifest, Zdjęcie -->
@@ -89,7 +89,7 @@
                     </p>
                     
                     <div class="flex flex-col gap-4">
-                        <h4 class="font-bold text-[18px] text-[#2E221C]">Co to oznacza w praktyce? Moje podejście to połączenie trzech perspektyw:</h4>
+                        <h4 class="font-bold text-[18px] text-[#2E221C]">Co to oznacza w practicale? Moje podejście to połączenie trzech perspektyw:</h4>
                         <ul class="space-y-3.5 text-[15px] md:text-[16px] text-[#5E524C] font-light">
                             <li class="flex items-start gap-3">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#2E221C]/40 mt-2.5 shrink-0"></span>
@@ -118,47 +118,51 @@
 
             </div>
 
-            <!-- PRAWA KOLUMNA: 4 KAFELKI (Idealnie po prawej stronie na wysokości tekstu) -->
-            <div class="lg:col-span-6 flex flex-col gap-4">
+            <!-- PRAWA KOLUMNA: DUŻY PIASKOWY BOKS Z BIAŁYMI KAFELKAMI -->
+            <div class="lg:col-span-6 bg-[#F2ECE1] border border-[#EBE3D5] rounded-[40px] p-8 md:p-10 flex flex-col gap-6 shadow-sm">
                 
-                <!-- Kafelek 1 -->
-                <div class="bg-[#F2ECE1]/40 border border-[#EBE3D5] rounded-[20px] p-6 transition-all duration-200 hover:bg-[#F2ECE1] hover:border-[#2E221C]/10">
-                    <h4 class="text-[16px] md:text-[18px] font-bold text-[#2E221C] tracking-tight mb-3">Praktyka zdobyta u liderów branży</h4>
-                    <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
-                        Swoje kompetencje szlifowałem w czołowych agencjach SEO i digitalowych w Polsce (m.in. Semhead, Verseo, Trust Luna, Euvic Digital). Praca z setkami zróżnicowanych biznesów nauczyła mnie, jak dostarczać wyniki, które bronią się w arkuszach Excela oraz w zmiennej rzeczywistości rynkowej.
-                    </p>
-                </div>
+                <div class="grid grid-cols-1 gap-6">
+                    
+                    <!-- Kafelek 1 -->
+                    <div class="bg-[#FAF8F5] rounded-[24px] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(46,34,28,0.05)]">
+                        <h4 class="text-[20px] md:text-[22px] font-bold text-[#2E221C] mb-4">Praktyka zdobyta u liderów branży</h4>
+                        <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
+                            Swoje kompetencje szlifowałem w czołowych agencjach SEO i digitalowych w Polsce (m.in. Semhead, Verseo, Trust Luna, Euvic Digital). Praca z setkami zróżnicowanych biznesów nauczyła mnie, jak dostarczać wyniki, które bronią się w arkuszach Excela oraz w zmiennej rzeczywistości rynkowej.
+                        </p>
+                    </div>
 
-                <!-- Kafelek 2 -->
-                <div class="bg-[#F2ECE1]/40 border border-[#EBE3D5] rounded-[20px] p-6 transition-all duration-200 hover:bg-[#F2ECE1] hover:border-[#2E221C]/10">
-                    <h4 class="text-[16px] md:text-[18px] font-bold text-[#2E221C] tracking-tight mb-3">Projektowanie dla ludzi i algorytmów</h4>
-                    <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
-                        Nie wierzę w wybór między widocznością a użytecznością. Łączę techniczny rygor SEO z empatią UX Writingu. Dzięki temu tworzę treści, które nie tylko przyciągają ruch z Google, ale realnie prowadzą użytkownika za rękę i eliminują bariery decyzyjne.
-                    </p>
-                </div>
+                    <!-- Kafelek 2 -->
+                    <div class="bg-[#FAF8F5] rounded-[24px] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(46,34,28,0.05)]">
+                        <h4 class="text-[20px] md:text-[22px] font-bold text-[#2E221C] mb-4">Projektowanie dla ludzi i algorytmów</h4>
+                        <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
+                            Nie wierzę w wybór między widocznością a użytecznością. Łączę techniczny rygor SEO z empatią UX Writingu. Dzięki temu tworzę treści, które nie tylko przyciągają ruch z Google, ale realnie prowadzą użytkownika za rękę i eliminują bariery decyzyjne.
+                        </p>
+                    </div>
 
-                <!-- Kafelek 3 -->
-                <div class="bg-[#F2ECE1]/40 border border-[#EBE3D5] rounded-[20px] p-6 transition-all duration-200 hover:bg-[#F2ECE1] hover:border-[#2E221C]/10">
-                    <h4 class="text-[16px] md:text-[18px] font-bold text-[#2E221C] tracking-tight mb-3">Technologia w służbie wyników</h4>
-                    <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
-                        Sprawnie wykorzystuję modele generatywne (Gemini, Claude) do optymalizacji procesów i podnoszenia jakości technicznej projektów. AI traktuję jako wzmacniacz mojej wiedzy, co pozwala mi na głębszą analizę danych i szybsze wdrażanie zaawansowanych struktur (FAQ/Schema).
-                    </p>
-                </div>
+                    <!-- Kafelek 3 -->
+                    <div class="bg-[#FAF8F5] rounded-[24px] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(46,34,28,0.05)]">
+                        <h4 class="text-[20px] md:text-[22px] font-bold text-[#2E221C] mb-4">Technologia w służbie wyników</h4>
+                        <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
+                            Sprawnie wykorzystuję modele generatywne (Gemini, Claude) do optymalizacji procesów i podnoszenia jakości technicznej projektów. AI traktuję jako wzmacniacz mojej wiedzy, co pozwala mi na głębszą analizę danych i szybsze wdrażanie zaawansowanych struktur (FAQ/Schema).
+                        </p>
+                    </div>
 
-                <!-- Kafelek 4 -->
-                <div class="bg-[#F2ECE1]/40 border border-[#EBE3D5] rounded-[20px] p-6 transition-all duration-200 hover:bg-[#F2ECE1] hover:border-[#2E221C]/10">
-                    <h4 class="text-[16px] md:text-[18px] font-bold text-[#2E221C] tracking-tight mb-3">Strategia szyta na miarę</h4>
-                    <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
-                        Unikam gotowych szablonów i sztywnych pakietów. Każdy projekt wyceniam i planuję indywidualnie, opierając się na audycie i realnych celach biznesowych. Skupiam się na dostarczaniu rozwiązań premium, które są spójne z estetyką marki i jej długofalową wizją.
-                    </p>
+                    <!-- Kafelek 4 -->
+                    <div class="bg-[#FAF8F5] rounded-[24px] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(46,34,28,0.05)]">
+                        <h4 class="text-[20px] md:text-[22px] font-bold text-[#2E221C] mb-4">Strategia szyta na miarę</h4>
+                        <p class="text-[#5E524C] text-[14px] md:text-[15px] leading-relaxed font-light">
+                            Unikam gotowych szablonów i sztywnych pakietów. Każdy projekt wyceniam i planuję indywidualnie, opierając się na audycie i realnych celach biznesowych. Skupiam się na dostarczaniu rozwiązań premium, które są spójne z estetyką marki i jej długofalową wizją.
+                        </p>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-        <!-- SEKCJA FAQ (PONIŻEJ, NA CAŁĄ SZEROKOŚĆ) -->
-        <section class="max-w-4xl mx-auto w-full pt-8">
+        <!-- SEKCJA FAQ (NA CAŁĄ SZEROKOŚĆ POD SPODEM) -->
+        <section class="max-w-4xl mx-auto w-full">
             <div class="text-center mb-12">
                 <span class="text-[10px] font-bold tracking-[5px] text-[#A59B90] uppercase block mb-3">FAQ</span>
                 <h2 class="text-[32px] font-bold tracking-tight text-[#2E221C]">Najważniejsze pytania</h2>
