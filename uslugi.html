@@ -223,14 +223,18 @@
         <div class="flex flex-col gap-4">
             
             <!-- PYTANIE 1: RÓŻNICA MIĘDZY SPRZEDAŻOWYM A UX WRITINGIEM -->
-            <details class="group bg-[#F2ECE1] border border-[#EBE3D5] rounded-2xl overflow-hidden transition-all duration-300">
-                <summary class="flex items-center justify-between p-6 font-semibold text-[16px] text-[#2E221C] cursor-pointer list-none select-none">
-                    Czym różni się klasyczny tekst sprzedażowy od UX writingu?
-                    <svg class="w-5 h-5 text-[#8E8276] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-                    </svg>
+            <details class="group bg-[#F2ECE1]/40 border border-[#EBE3D5] rounded-[20px] p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-200 open:bg-[#F2ECE1] open:border-[#2E221C]/10">
+                <summary class="flex items-center justify-between cursor-pointer list-none focus:outline-none">
+                    <h3 class="text-[16px] md:text-[18px] font-bold text-[#2E221C] tracking-tight">
+                        Czym różni się klasyczny tekst sprzedażowy od UX writingu?
+                    </h3>
+                    <span class="ml-4 flex-shrink-0 transition-transform duration-200 group-open:rotate-180 text-[#8E8276]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
                 </summary>
-                <div class="px-6 pb-6 text-[#5E524C] text-[14px] leading-relaxed font-light border-t border-[#EBE3D5]/40 pt-4">
+                <div class="mt-4 text-[14px] md:text-[15px] text-[#5E524C] leading-relaxed font-light">
                     Główną różnicą jest cel oraz miejsce kontaktu z użytkownikiem. Klasyczny copywriting (np. na sprzedażowy landing page czy do kampanii e-mail marketing) ma za zadanie przekonać, wywołać emocje i nakłonić do zakupu. Działa „przed” transakcją. 
                     <br><br>
                     Z kolei UX writing działa już wewnątrz produktu (formularze, koszyk, ekrany ustawień). Nie skupia się na perswazji, ale na użyteczności i komforcie. Jego zadaniem jest bezbłędne i bezwysiłkowe przeprowadzenie klienta przez proces (np. bezbłędna płatność), eliminując jakiekolwiek wątpliwości czy nieporozumienia techniczne.
@@ -238,16 +242,20 @@
             </details>
 
             <!-- PYTANIE 2: CO TO JEST ARTYKUŁ EKSPERCKI -->
-            <details class="group bg-[#F2ECE1] border border-[#EBE3D5] rounded-2xl overflow-hidden transition-all duration-300">
-                <summary class="flex items-center justify-between p-6 font-semibold text-[16px] text-[#2E221C] cursor-pointer list-none select-none">
-                    Czym jest artykuł ekspercki i dlaczego buduje sprzedaż?
-                    <svg class="w-5 h-5 text-[#8E8276] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-                    </svg>
+            <details class="group bg-[#F2ECE1]/40 border border-[#EBE3D5] rounded-[20px] p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-200 open:bg-[#F2ECE1] open:border-[#2E221C]/10">
+                <summary class="flex items-center justify-between cursor-pointer list-none focus:outline-none">
+                    <h3 class="text-[16px] md:text-[18px] font-bold text-[#2E221C] tracking-tight">
+                        Czym jest artykuł ekspercki i dlaczego buduje sprzedaż?
+                    </h3>
+                    <span class="ml-4 flex-shrink-0 transition-transform duration-200 group-open:rotate-180 text-[#8E8276]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
                 </summary>
-                <div class="px-6 pb-6 text-[#5E524C] text-[14px] leading-relaxed font-light border-t border-[#EBE3D5]/40 pt-4">
+                <div class="mt-4 text-[14px] md:text-[15px] text-[#5E524C] leading-relaxed font-light">
                     Artykuł ekspercki to głęboki, merytoryczny tekst, który nie tylko „odpowiada na zapytania Google”, ale wyczerpuje temat i rozwiązuje realny problem Twojego odbiorcy. Buduje sprzedaż wielopoziomowo:
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                    <ul class="list-disc pl-5 mt-3 space-y-1">
                         <li>pozycjonuje Twoją markę jako niekwestionowanego lidera i eksperta w swojej niszy rynkowej;</li>
                         <li>odpowiada na wątpliwości klienta na etapie edukacyjnym (zanim podejmie ostateczną decyzję);</li>
                         <li>Google nagradza takie teksty wysokimi pozycjami dzięki wskaźnikowi E-E-A-T (Doświadczenie, Ekspertyza, Autorytet, Zaufanie).</li>
@@ -256,38 +264,43 @@
             </details>
 
             <!-- PYTANIE 3: CZY OPTYMALIZACJA SEO NIE POPSUJE BRZMIENIA STRONY -->
-            <details class="group bg-[#F2ECE1] border border-[#EBE3D5] rounded-2xl overflow-hidden transition-all duration-300">
-                <summary class="flex items-center justify-between p-6 font-semibold text-[16px] text-[#2E221C] cursor-pointer list-none select-none">
-                    Czy optymalizacja pod wyszukiwarki (SEO) nie popsuje naturalnego brzmienia mojej strony?
-                    <svg class="w-5 h-5 text-[#8E8276] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-                    </svg>
+            <details class="group bg-[#F2ECE1]/40 border border-[#EBE3D5] rounded-[20px] p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-200 open:bg-[#F2ECE1] open:border-[#2E221C]/10">
+                <summary class="flex items-center justify-between cursor-pointer list-none focus:outline-none">
+                    <h3 class="text-[16px] md:text-[18px] font-bold text-[#2E221C] tracking-tight">
+                        Czy optymalizacja pod wyszukiwarki (SEO) nie popsuje naturalnego brzmienia mojej strony?
+                    </h3>
+                    <span class="ml-4 flex-shrink-0 transition-transform duration-200 group-open:rotate-180 text-[#8E8276]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
                 </summary>
-                <div class="px-6 pb-6 text-[#5E524C] text-[14px] leading-relaxed font-light border-t border-[#EBE3D5]/40 pt-4">
+                <div class="mt-4 text-[14px] md:text-[15px] text-[#5E524C] leading-relaxed font-light">
                     Absolutnie nie – a wręcz przeciwnie. Dawne czasy „upychania słów kluczowych” w nienaturalnych formach odeszły do lamusa. Dzisiejsze algorytmy Google (takie jak BERT czy MUM) są na tyle zaawansowane, że potrafią ocenić naturalną jakość i płynność tekstu. Moje podejście polega na integracji fraz kluczowych w sposób niemal niezauważalny dla czytelnika. Twoja strona będzie brzmieć autentycznie i płynnie, realizując przy tym rygorystyczne wymagania techniczne.
                 </div>
             </details>
 
             <!-- PYTANIE 4: CO DAJE AUDYT TREŚCI -->
-            <details class="group bg-[#F2ECE1] border border-[#EBE3D5] rounded-2xl overflow-hidden transition-all duration-300">
-                <summary class="flex items-center justify-between p-6 font-semibold text-[16px] text-[#2E221C] cursor-pointer list-none select-none">
-                    Co dokładnie zyskuję dzięki zleceniu audytu treści?
-                    <svg class="w-5 h-5 text-[#8E8276] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-                    </svg>
+            <details class="group bg-[#F2ECE1]/40 border border-[#EBE3D5] rounded-[20px] p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-200 open:bg-[#F2ECE1] open:border-[#2E221C]/10">
+                <summary class="flex items-center justify-between cursor-pointer list-none focus:outline-none">
+                    <h3 class="text-[16px] md:text-[18px] font-bold text-[#2E221C] tracking-tight">
+                        Co dokładnie zyskuję dzięki zleceniu audytu treści?
+                    </h3>
+                    <span class="ml-4 flex-shrink-0 transition-transform duration-200 group-open:rotate-180 text-[#8E8276]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
                 </summary>
-                <div class="px-6 pb-6 text-[#5E524C] text-[14px] leading-relaxed font-light border-t border-[#EBE3D5]/40 pt-4">
-                    Audyt treści to dokładne prześwietlenie Twoich obecnych materiałów na stronie czy w aplikacji. Otrzymujesz ode mnie gotowy raport wraz z tzw. „listę szybkich wygranych” (quick wins). Wskazuję w nim m.in.:
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                <div class="mt-4 text-[14px] md:text-[15px] text-[#5E524C] leading-relaxed font-light">
+                    Audyt treści to dokładne prześwietlenie Twoich obecnych materiałów na stronie czy w aplikacji. Otrzymujesz ode mnie gotowy raport wraz z tzw. „listą szybkich wygranych” (quick wins). Wskazuję w nim m.in.:
+                    <ul class="list-disc pl-5 mt-3 space-y-1">
                         <li>gdzie użytkownik "gubi się" lub opuszcza koszyk przez niejasne komunikaty (UX);</li>
                         <li>które treści mają ukryty potencjał i po drobnej optymalizacji mogą wejść do TOP 10 Google (SEO);</li>
                         <li>jakie błędy językowe, stylistyczne lub logiczne obniżają profesjonalizm Twojej witryny.</li>
                     </ul>
                 </div>
             </details>
-
-        </div>
-    </section>
 
     <!-- FOOTER -->
     <footer class="max-w-6xl mx-auto px-6 py-10 border-t border-[#EBE3D5] flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#8E8276]">
