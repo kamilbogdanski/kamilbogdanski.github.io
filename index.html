@@ -542,88 +542,173 @@
             <span>Gdańsk, PL</span>
         </div>
     </footer>
-<!-- BANER COOKIES (STYLE + HTML + SKRYPT) -->
+<!-- BANER COOKIES (CENTRUM EKRANU - DESIGN SYSTEM 2026) -->
     <style>
+        /* Subtelne przyciemnienie i rozmycie tła strony */
+        .cookie-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            z-index: 99998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .cookie-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Okno modalne na środku ekranu */
         #cookie-banner.cookie-banner {
             position: fixed !important;
-            bottom: -200px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 650px;
-            background: rgba(255, 255, 255, 0.9) !important;
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 0, 0, 0.1) !important;
-            border-radius: 20px !important;
-            padding: 1.2rem 1.5rem !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -45%) scale(0.95) !important;
+            width: 90% !important;
+            max-width: 500px !important;
+            background: rgba(255, 255, 255, 0.92) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            border: 1px solid rgba(0, 0, 0, 0.08) !important;
+            border-radius: 28px !important;
+            padding: 2.5rem 2rem !important;
             display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            gap: 2rem !important;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+            flex-direction: column !important;
+            gap: 1.2rem !important;
+            text-align: center !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12) !important;
             z-index: 99999 !important;
-            opacity: 0;
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
         }
 
         #cookie-banner.cookie-banner.show {
-            bottom: 2rem !important;
+            transform: translate(-50%, -50%) scale(1) !important;
             opacity: 1 !important;
+            pointer-events: auto !important;
         }
 
-        #cookie-banner.cookie-banner p {
+        .cookie-title {
+            font-family: 'Outfit', sans-serif !important;
+            font-size: 1.5rem !important;
+            font-weight: 700 !important;
+            color: #09090B !important;
             margin: 0 !important;
-            font-family: 'Courier Prime', monospace, sans-serif !important;
-            font-size: 0.9rem !important;
+            letter-spacing: -0.02em !important;
+        }
+
+        .cookie-text {
+            font-family: 'Courier Prime', monospace !important;
+            font-size: 0.92rem !important;
             color: #52525B !important;
-            line-height: 1.5 !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
         }
 
-        #cookie-banner .cookie-btn {
-            font-size: 0.85rem !important;
-            padding: 0.5rem 1.5rem !important;
+        /* Układ przycisków */
+        .cookie-actions {
+            display: flex !important;
+            gap: 0.8rem !important;
+            justify-content: center !important;
+            margin-top: 0.5rem !important;
+        }
+
+        .cookie-btn-primary {
+            flex: 1 !important;
+            padding: 0.8rem 1.2rem !important;
+            border-radius: 50px !important;
+            background: #09090B !important;
+            color: #F4F4F5 !important;
             border: none !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 0.9rem !important;
             cursor: pointer !important;
-            white-space: nowrap !important;
+            transition: all 0.3s ease !important;
         }
 
-        @media (max-width: 768px) {
-            #cookie-banner.cookie-banner {
-                flex-direction: column !important;
-                text-align: center !important;
-                gap: 1rem !important;
-                padding: 1.2rem !important;
-                width: 95% !important;
-            }
-            #cookie-banner.cookie-banner.show {
-                bottom: 1rem !important;
+        .cookie-btn-primary:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .cookie-btn-secondary {
+            flex: 1 !important;
+            padding: 0.8rem 1.2rem !important;
+            border-radius: 50px !important;
+            background: transparent !important;
+            color: #52525B !important;
+            border: 1px solid rgba(0, 0, 0, 0.15) !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 600 !important;
+            font-size: 0.9rem !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .cookie-btn-secondary:hover {
+            background: rgba(0, 0, 0, 0.05) !important;
+            color: #09090B !important;
+        }
+
+        @media (max-width: 500px) {
+            .cookie-actions {
+                flex-direction: column-reverse !important;
             }
         }
     </style>
 
+    <!-- Tło przyciemniające -->
+    <div id="cookie-overlay" class="cookie-overlay"></div>
+
+    <!-- Okno cookies -->
     <div id="cookie-banner" class="cookie-banner">
-        <p>Ta strona używa ciasteczek (cookies), aby zapewnić Ci najlepsze doświadczenia. Czytając dalej, zgadzasz się na ich użycie.</p>
-        <button id="accept-cookies" class="btn-glow cookie-btn">Rozumiem</button>
+        <h3 class="cookie-title">Dbam o Twoją prywatność</h3>
+        <p class="cookie-text">Używam plików cookie, aby strona działała poprawnie i dostarczała ci jak najlepszych wrażeń. Wybierz, czy chcesz zaakceptować wszystkie pliki, czy ograniczyć je do niezbędnych.</p>
+        <div class="cookie-actions">
+            <button id="accept-necessary" class="cookie-btn-secondary">Tylko niezbędne</button>
+            <button id="accept-all" class="cookie-btn-primary">Akceptuję wszystkie</button>
+        </div>
     </div>
 
+    <!-- Skrypt obsługi obu przycisków -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const banner = document.getElementById("cookie-banner");
-            const acceptBtn = document.getElementById("accept-cookies");
+            const overlay = document.getElementById("cookie-overlay");
+            const btnAll = document.getElementById("accept-all");
+            const btnNecessary = document.getElementById("accept-necessary");
 
-            if (!banner || !acceptBtn) return;
+            if (!banner || !btnAll || !btnNecessary) return;
 
-            // Pokazuj tylko wtedy, gdy nie kliknięto wcześniej "Rozumiem"
+            // Pokazuj okno tylko jeśli nie wybrano żadnej opcji wcześniej
             if (!localStorage.getItem("cookiesAccepted")) {
                 setTimeout(() => {
                     banner.classList.add("show");
-                }, 800);
+                    if (overlay) overlay.classList.add("show");
+                }, 500);
             }
 
-            acceptBtn.addEventListener("click", function() {
-                localStorage.setItem("cookiesAccepted", "true");
+            function closeCookieModal(choiceType) {
+                localStorage.setItem("cookiesAccepted", choiceType);
                 banner.classList.remove("show");
+                if (overlay) overlay.classList.remove("show");
+            }
+
+            btnAll.addEventListener("click", function() {
+                closeCookieModal("all");
+            });
+
+            btnNecessary.addEventListener("click", function() {
+                closeCookieModal("necessary");
             });
         });
     </script>
