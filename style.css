@@ -41,9 +41,12 @@
     padding: 0.5rem 1.5rem;
     border: none;
     cursor: pointer;
-    white-space: nowrap; /* Zapobiega łamaniu słowa w przycisku */
+    white-space: nowrap;
 }
-/* 7. Baner Cookies na mobile */
+
+/* --- RESPONSIVNESS (Style mobilne) --- */
+@media (max-width: 768px) {
+    /* 7. Baner Cookies na mobile */
     .cookie-banner {
         flex-direction: column;
         text-align: center;
@@ -51,4 +54,7 @@
         padding: 1.2rem;
         width: 95%;
     }
-    .cookie-banner.show { bottom: 1rem; }
+    .cookie-banner.show { 
+        bottom: 1rem; 
+    }
+}
