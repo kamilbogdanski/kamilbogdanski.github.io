@@ -542,33 +542,85 @@
             <span>Gdańsk, PL</span>
         </div>
     </footer>
-<!-- Baner Cookies -->
+<!-- BANER COOKIES (STYLE + HTML + SKRYPT) -->
+    <style>
+        #cookie-banner.cookie-banner {
+            position: fixed !important;
+            bottom: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 650px;
+            background: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 0, 0, 0.1) !important;
+            border-radius: 20px !important;
+            padding: 1.2rem 1.5rem !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            gap: 2rem !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+            z-index: 99999 !important;
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+
+        #cookie-banner.cookie-banner.show {
+            bottom: 2rem !important;
+            opacity: 1 !important;
+        }
+
+        #cookie-banner.cookie-banner p {
+            margin: 0 !important;
+            font-family: 'Courier Prime', monospace, sans-serif !important;
+            font-size: 0.9rem !important;
+            color: #52525B !important;
+            line-height: 1.5 !important;
+        }
+
+        #cookie-banner .cookie-btn {
+            font-size: 0.85rem !important;
+            padding: 0.5rem 1.5rem !important;
+            border: none !important;
+            cursor: pointer !important;
+            white-space: nowrap !important;
+        }
+
+        @media (max-width: 768px) {
+            #cookie-banner.cookie-banner {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 1rem !important;
+                padding: 1.2rem !important;
+                width: 95% !important;
+            }
+            #cookie-banner.cookie-banner.show {
+                bottom: 1rem !important;
+            }
+        }
+    </style>
+
     <div id="cookie-banner" class="cookie-banner">
         <p>Ta strona używa ciasteczek (cookies), aby zapewnić Ci najlepsze doświadczenia. Czytając dalej, zgadzasz się na ich użycie.</p>
         <button id="accept-cookies" class="btn-glow cookie-btn">Rozumiem</button>
     </div>
- <!-- 1. KONTENER HTML BANERA -->
-    <div id="cookie-banner" class="cookie-banner">
-        <p>Ta strona używa ciasteczek (cookies), aby zapewnić Ci najlepsze doświadczenia. Czytając dalej, zgadzasz się na ich użycie.</p>
-        <button id="accept-cookies" class="btn-glow cookie-btn">Rozumiem</button>
-    </div>
-    <!-- 2. SKRYPT JS -->
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const banner = document.getElementById("cookie-banner");
             const acceptBtn = document.getElementById("accept-cookies");
 
-            // Warunek bezpieczeństwa - jeśli nie ma elementów, skrypt przerywa działanie
             if (!banner || !acceptBtn) return;
 
-            // Jeśli ciasteczka nie zostały wcześniej zaakceptowane, pokaż baner
+            // Pokazuj tylko wtedy, gdy nie kliknięto wcześniej "Rozumiem"
             if (!localStorage.getItem("cookiesAccepted")) {
                 setTimeout(() => {
                     banner.classList.add("show");
-                }, 1000);
+                }, 800);
             }
 
-            // Po kliknięciu zapisz wybór i ukryj baner
             acceptBtn.addEventListener("click", function() {
                 localStorage.setItem("cookiesAccepted", "true");
                 banner.classList.remove("show");
