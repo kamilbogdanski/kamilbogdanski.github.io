@@ -547,21 +547,28 @@
         <p>Ta strona używa ciasteczek (cookies), aby zapewnić Ci najlepsze doświadczenia. Czytając dalej, zgadzasz się na ich użycie.</p>
         <button id="accept-cookies" class="btn-glow cookie-btn">Rozumiem</button>
     </div>
-    <!-- Skrypt do obsługi banera -->
+ <!-- 1. KONTENER HTML BANERA -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Ta strona używa ciasteczek (cookies), aby zapewnić Ci najlepsze doświadczenia. Czytając dalej, zgadzasz się na ich użycie.</p>
+        <button id="accept-cookies" class="btn-glow cookie-btn">Rozumiem</button>
+    </div>
+    <!-- 2. SKRYPT JS -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const banner = document.getElementById("cookie-banner");
             const acceptBtn = document.getElementById("accept-cookies");
 
-            // Sprawdzamy, czy użytkownik nie kliknął już "Rozumiem"
+            // Warunek bezpieczeństwa - jeśli nie ma elementów, skrypt przerywa działanie
+            if (!banner || !acceptBtn) return;
+
+            // Jeśli ciasteczka nie zostały wcześniej zaakceptowane, pokaż baner
             if (!localStorage.getItem("cookiesAccepted")) {
-                // Pokazujemy baner z opóźnieniem sekundy dla płynnego efektu
                 setTimeout(() => {
                     banner.classList.add("show");
                 }, 1000);
             }
 
-            // Zapisujemy wybór po kliknięciu i chowamy baner
+            // Po kliknięciu zapisz wybór i ukryj baner
             acceptBtn.addEventListener("click", function() {
                 localStorage.setItem("cookiesAccepted", "true");
                 banner.classList.remove("show");
