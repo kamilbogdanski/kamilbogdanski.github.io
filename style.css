@@ -1,4 +1,4 @@
-/* --- BANER COOKIES --- */
+/* --- BANER COOKIES (Style główne dla komputerów) --- */
 .cookie-banner {
     position: fixed;
     bottom: -150px; /* Ukryty poza ekranem na starcie */
@@ -22,7 +22,7 @@
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Klasa aktywująca, dodawana przez JavaScript */
+/* Klasa aktywująca po 1 sekundzie */
 .cookie-banner.show {
     bottom: 2rem;
     opacity: 1;
@@ -44,9 +44,8 @@
     white-space: nowrap;
 }
 
-/* --- RESPONSIVNESS (Style mobilne) --- */
+/* --- DOSTOSOWANIE DLA TELEFONÓW (Tylko poniżej 768px) --- */
 @media (max-width: 768px) {
-    /* 7. Baner Cookies na mobile */
     .cookie-banner {
         flex-direction: column;
         text-align: center;
@@ -54,6 +53,7 @@
         padding: 1.2rem;
         width: 95%;
     }
+    
     .cookie-banner.show { 
         bottom: 1rem; 
     }
