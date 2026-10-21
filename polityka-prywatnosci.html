@@ -3,73 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polityka Prywatności | Kamil Bogdański</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Polityka Prywatności — Kamil Bogdański</title>
+    <!-- Tailwind CSS dla precyzyjnego pozycjonowania i nowoczesnego gridu -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Outfit i Figtree -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Outfit', 'Figtree', sans-serif;
+            background-color: #FAF8F5; /* Warm off-white */
+            color: #2E221C; /* Deep warm charcoal/chocolate */
+        }
+
+        /* Przyciski całkowicie płaskie i minimalistyczne */
+        .button-minimal {
+            box-shadow: none !important;
+            transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease !important;
+        }
+        .button-minimal:hover {
+            transform: translateY(-2px) !important;
+        }
+    </style>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
-    <!-- NAWIGACJA -->
-    <nav class="navbar">
-        <div class="logo">K/B</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="uslugi.html">Usługi</a></li>
-            <li><a href="index.html#about">O mnie</a></li>
-        </ul>
-        <a href="mailto:bogdanskikamil1@gmail.com" class="btn-glow">Rozpocznij projekt</a>
-    </nav>
+    <!-- NAVBAR -->
+    <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <!-- Logo / Avatar -->
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <div class="w-10 h-10 rounded-full bg-white border border-[#E9E1D3] flex items-center justify-center overflow-hidden shadow-sm">
+                <img src="https://useme-prod-public.s3.amazonaws.com/avatars/076/343476_MK9RZ8D.png" alt="Kamil Bogdański - KB Logo" class="w-full h-full object-cover">
+            </div>
+            <span class="font-medium text-[15px] tracking-tight text-[#2E221C]">Kamil Bogdański</span>
+        </a>
 
-    <!-- TREŚĆ POLITYKI PRYWATNOŚCI -->
-    <main style="padding-top: 10rem; padding-bottom: 6rem; min-height: 80vh;">
-        <section class="container fade-in" style="max-width: 800px;">
-            <h1>Polityka Prywatności</h1>
-            <p style="margin-bottom: 3rem; font-size: 0.95rem; color: var(--text-muted);">
-                Ostatnia aktualizacja: październik 2026 r.
-            </p>
+        <!-- Menu nawigacji -->
+        <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-[#5E524C]">
+            <a href="uslugi.html" class="hover:text-[#2E221C] transition-colors">Usługi</a>
+            <a href="o-mnie.html" class="hover:text-[#2E221C] transition-colors">O mnie</a>
+            <a href="kontakt.html" class="hover:text-[#2E221C] transition-colors">Kontakt</a>
+        </nav>
 
-            <article style="display: flex; flex-direction: column; gap: 2.5rem;">
-                
-                <div class="policy-block">
-                    <h2>1. Administrator Danych Osobowych</h2>
-                    <p>Administratorem Twoich danych osobowych przetwarzanych w ramach tego serwisu jest Kamil Bogdański, świadczący usługi z zakresu copywritingu, UX writingu oraz audytów treści. W sprawach związanych z ochroną danych osobowych możesz skontaktować się ze mną pod adresem e-mail: <strong>bogdanskikamil1@gmail.com</strong> lub telefonicznie: <strong>+48 505 909 288</strong>.</p>
-                </div>
+        <!-- Przycisk CTA -->
+        <div>
+            <a href="kontakt.html" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 button-minimal flex items-center gap-2">
+                Napisz wiadomość <span class="text-[12px]">&#10142;</span>
+            </a>
+        </div>
+    </header>
 
-                <div class="policy-block">
-                    <h2>2. Formularz kontaktowy i korespondencja</h2>
-                    <p>Jeśli kontaktujesz się ze mną za pośrednictwem formularza kontaktowego na stronie, bezpośredniego adresu e-mail lub telefonu, podajesz swoje dane osobowe (np. imię, adres e-mail, numer telefonu oraz treść wiadomości).</p>
-                    <p style="margin-top: 1rem;"><strong>Cel i podstawa prawna:</strong></p>
-                    <ul style="padding-left: 1.2rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.7;">
-                        <li><strong>Obsługa zgłoszenia i odpowiedź na wiadomość:</strong> na podstawie prawnie uzasadnionego interesu Administratora (art. 6 ust. 1 lit. f RODO).</li>
-                        <li><strong>Podjęcie działań zmierzających do zawarcia umowy:</strong> na Twoje żądanie przed zawarciem umowy (art. 6 ust. 1 lit. b RODO).</li>
+    <!-- GŁÓWNA SEKCJA POLITYKI PRYWATNOŚCI -->
+    <main class="max-w-4xl mx-auto px-6 pt-12 pb-32">
+        
+        <!-- NAGŁÓWEK -->
+        <div class="mb-12 text-left">
+            <span class="text-[10px] font-bold tracking-[5px] text-[#A59B90] uppercase block mb-4">DOKUMENTACJA LEGALNA</span>
+            <h1 class="text-[38px] md:text-[50px] font-bold leading-[1.15] tracking-tight text-[#2E221C] mb-4">
+                Polityka 
+                <span class="relative inline-block px-1">
+                    <span class="absolute inset-x-0 h-[35%] bottom-1 -z-10 bg-[#EADFCF]/75 rounded-sm"></span>
+                    prywatności
+                </span>
+            </h1>
+            <p class="text-[#8E8276] text-[14px] font-medium">Ostatnia aktualizacja: październik 2026 r.</p>
+        </div>
+
+        <!-- KONTENER Z TREŚCIĄ -->
+        <div class="bg-[#F2ECE1] border border-[#EBE3D5] rounded-[32px] md:rounded-[40px] p-8 md:p-12 shadow-sm flex flex-col gap-10">
+            
+            <!-- 1. ADO -->
+            <section class="flex flex-col gap-3">
+                <h2 class="text-[20px] md:text-[22px] font-bold text-[#2E221C]">1. Administrator Danych Osobowych</h2>
+                <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed font-light">
+                    Administratorem Twoich danych osobowych przetwarzanych w ramach tego serwisu jest <strong>Kamil Bogdański</strong>, świadczący usługi z zakresu UX writingu, copywritingu oraz audytów treści. W sprawach związanych z ochroną danych osobowych możesz skontaktować się ze mną e-mailowo: <a href="mailto:bogdanskikamil@gmail.com" class="text-[#2E221C] underline font-medium hover:opacity-80">bogdanskikamil@gmail.com</a> lub telefonicznie: <a href="tel:+48505989280" class="text-[#2E221C] underline font-medium hover:opacity-80">+48 505 989 280</a>.
+                </p>
+            </section>
+
+            <hr class="border-[#EBE3D5]">
+
+            <!-- 2. FORMULARZ KONTAKTOWY -->
+            <section class="flex flex-col gap-3">
+                <h2 class="text-[20px] md:text-[22px] font-bold text-[#2E221C]">2. Formularz kontaktowy i korespondencja</h2>
+                <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed font-light">
+                    Gdy kontaktujesz się ze mną za pośrednictwem formularza kontaktowego (obsługiwanego przez uslugę Formspree), poczty e-mail lub telefonicznie, przekazujesz mi swoje dane osobowe (np. imię, nazwisko, nazwę firmy, adres e-mail oraz treść wiadomości).
+                </p>
+                <div class="bg-[#FAF8F5] rounded-2xl p-5 border border-[#EBE3D5] mt-2">
+                    <span class="text-[12px] font-bold text-[#A59B90] uppercase tracking-wider block mb-2">CELE I PODSTAWY PRZETWARZANIA:</span>
+                    <ul class="list-disc list-inside text-[#5E524C] text-[14px] md:text-[15px] space-y-2 font-light">
+                        <li><strong>Obsługa zapytania i odpowiedź:</strong> na podstawie prawnie uzasadnionego interesu Administratora (art. 6 ust. 1 lit. f RODO).</li>
+                        <li><strong>Podjęcie działań przed zawarciem umowy:</strong> na Twoje żądanie przed podjęciem współpracy (art. 6 ust. 1 lit. b RODO).</li>
                     </ul>
-                    <p style="margin-top: 1rem;">Podanie danych jest dobrowolne, ale niezbędne do uzyskania odpowiedzi na wysłaną wiadomość.</p>
                 </div>
+            </section>
 
-                <div class="policy-block">
-                    <h2>3. Okres przechowywania danych</h2>
-                    <p>Dane przesłane w ramach formularza kontaktowego lub korespondencji e-mail przechowywane są przez czas niezbędny do obsługi zapytania i prowadzenia ustaleń biznesowych, a po ich zakończeniu – przez okres przedawnienia ewentualnych roszczeń wynikających z przepisów prawa lub do momentu zgłoszenia skutecznego sprzeciwu wobec ich przetwarzania.</p>
+            <hr class="border-[#EBE3D5]">
+
+            <!-- 3. OKRES PRZECHOWYWANIA -->
+            <section class="flex flex-col gap-3">
+                <h2 class="text-[20px] md:text-[22px] font-bold text-[#2E221C]">3. Okres przechowywania danych</h2>
+                <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed font-light">
+                    Dane przekazane w formularzu lub wiadomości e-mail są przechowywane przez czas niezbędny do obsługi Twojego zapytania oraz ustaleń projektowych. Po zakończeniu kontaktu dane mogą być przechowywane przez okres przedawnienia ewentualnych roszczeń lub do momentu wniesienia przez Ciebie skutecznego sprzeciwu.
+                </p>
+            </section>
+
+            <hr class="border-[#EBE3D5]">
+
+            <!-- 4. HOSTING I ODBIORCY -->
+            <section class="flex flex-col gap-3">
+                <h2 class="text-[20px] md:text-[22px] font-bold text-[#2E221C]">4. Odbiorcy danych i hosting</h2>
+                <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed font-light">
+                    Strona internetowa jest hostowana w usłudze <strong>GitHub Pages</strong> (GitHub Inc., USA). Do wysyłki formularza kontaktowego wykorzystywane jest narzędzie <strong>Formspree</strong> (Formspree Inc., USA), a obsługa poczty e-mail odbywa się w usłudze <strong>Google Workspace</strong> (Google Ireland Ltd.). Podmioty te gwarantują odpowiednie standardy bezpieczeństwa przetwarzania danych osobowych.
+                </p>
+            </section>
+
+            <hr class="border-[#EBE3D5]">
+
+            <!-- 5. COOKIES & LOCALSTORAGE -->
+            <section class="flex flex-col gap-3">
+                <h2 class="text-[20px] md:text-[22px] font-bold text-[#2E221C]">5. Pliki Cookies i Pamięć Lokalna (localStorage)</h2>
+                <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed font-light">
+                    Serwis wykorzystuje mechanizm <strong>localStorage</strong> (pamięć lokalną Twojej przeglądarki) wyłącznie w celu zapamiętania wyboru dotyczącego akceptacji komunikatu o prywatności. Wpis ten nie profiluje użytkowników, nie śledzi Twojej aktywności na innych stronach i nie zbiera danych osobowych.
+                </p>
+            </section>
+
+            <hr class="border-[#EBE3D5]">
+
+            <!-- 6. PRAWA UŻYTKOWNIKA -->
+            <section class="flex flex-col gap-3">
+                <h2 class="text-[20px] md:text-[22px] font-bold text-[#2E221C]">6. Twoje Prawa</h2>
+                <p class="text-[#5E524C] text-[15px] md:text-[16px] leading-relaxed font-light mb-2">
+                    W związku z przetwarzaniem danych przysługują Ci następujące uprawnienia:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="bg-[#FAF8F5] p-4 rounded-xl border border-[#EBE3D5] text-[14px] text-[#2E221C] font-medium">✦ Prawo dostępu do danych i kopii</div>
+                    <div class="bg-[#FAF8F5] p-4 rounded-xl border border-[#EBE3D5] text-[14px] text-[#2E221C] font-medium">✦ Prawo do sprostowania danych</div>
+                    <div class="bg-[#FAF8F5] p-4 rounded-xl border border-[#EBE3D5] text-[14px] text-[#2E221C] font-medium">✦ Prawo do usunięcia danych</div>
+                    <div class="bg-[#FAF8F5] p-4 rounded-xl border border-[#EBE3D5] text-[14px] text-[#2E221C] font-medium">✦ Prawo do ograniczenia przetwarzania</div>
                 </div>
+                <p class="text-[#8E8276] text-[13px] mt-2">
+                    Masz również prawo wnieść skargę do organu nadzorczego – Prezesa Urzędu Ochrony Danych Osobowych (UODO), ul. Stawki 2, 00-193 Warszawa.
+                </p>
+            </section>
 
-                <div class="policy-block">
-                    <h2>4. Odbiorcy danych i hosting</h2>
-                    <p>Strona www jest hostowana w usłudze <strong>GitHub Pages</strong> (GitHub Inc., USA). W związku z korzystaniem z hostingu, serwer automatycznie przetwarza anonimowe logi techniczne (np. adres IP, datę i czas żądania), co jest niezbędne do poprawnego i bezpiecznego serwowania strony.</p>
-                    <p style="margin-top: 1rem;">Twój kontakt e-mailowy obsługiwany jest przez zewnętrznego dostawcę usługi poczty elektronicznej (Google Ireland Ltd.). Administrator nie sprzedaje ani nie udostępnia Twoich danych podmiotom trzecim w celach marketingowych.</p>
-                </div>
+        </div>
+    </main>
 
-                <div class="policy-block">
-                    <h2>5. Pliki Cookies i Pamięć Lokalna (localStorage)</h2>
-                    <p>Serwis wykorzystuje mechanizm <strong>localStorage</strong> (lokalną pamięć przeglądarki) wyłącznie w celu zapamiętania Twoich preferencji dotyczących akceptacji banera prywatności.</p>
-                    <p style="margin-top: 1rem;">Wspomniany wpis nie zbiera danych osobowych ani nie śledzi Twojej aktywności na innych stronach internetowych. W każdej chwili możesz samodzielnie wyczyścić pamięć przeglądarki lub zmienić ustawienia obsługi plików cookie w swojej przeglądarce internetowej.</p>
-                </div>
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto px-6 py-10 border-t border-[#EBE3D5] flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#8E8276]">
+        <div>
+            &copy; 2026 Kamil Bogdański. Wszystkie prawa zastrzeżone.
+        </div>
+        <div class="flex items-center gap-6">
+            <a href="polityka-prywatnosci.html" class="text-[#2E221C] font-medium underline">Polityka Prywatności</a>
+            <a href="https://linkedin.com/in/kamilbogdanski/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2E221C] transition-colors">LinkedIn</a>
+            <a href="mailto:bogdanskikamil@gmail.com" class="hover:text-[#2E221C] transition-colors">E-mail</a>
+            <span>Gdańsk, PL</span>
+        </div>
+    </footer>
 
-                <div class="policy-block">
-                    <h2>6. Twoje Prawa</h2>
-                    <p>W związku z przetwarzaniem Twoich danych osobowych przysługują Ci następujące prawa:</p>
-                    <ul style="padding-left: 1.2rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.7;">
-                        <li>Prawo dostępu do swoich danych oraz otrzymania ich kopii,</li>
-                        <li>Prawo do sprostowania (poprawiania) danych,</li>
-                        <li>Prawo do usunięcia danych ("prawo do bycia zapomnianym"),</li>
-                        <li>Prawo do ograniczenia przetwarzania danych,</li>
-                        <li>Prawo do wniesienia sprzeciwu wobec przetwarzania danych,</li>
-                        <li>Prawo do wniesienia sk
+</body>
+</html>
