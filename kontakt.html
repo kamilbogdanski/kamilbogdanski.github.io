@@ -24,7 +24,7 @@
             transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease !important;
         }
         .button-minimal:hover {
-            transform: translateY(-1px) !important;
+            transform: translateY(-2px) !important;
         }
     </style>
 </head>
@@ -32,7 +32,7 @@
 
     <!-- NAVBAR -->
     <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-        <!-- Logo / Avatar (Z Twoim autorskim logotypem KB) -->
+        <!-- Logo / Avatar -->
         <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
             <div class="w-10 h-10 rounded-full bg-white border border-[#E9E1D3] flex items-center justify-center overflow-hidden shadow-sm">
                 <img src="https://useme-prod-public.s3.amazonaws.com/avatars/076/343476_MK9RZ8D.png" alt="Kamil Bogdański - KB Logo" class="w-full h-full object-cover">
@@ -42,12 +42,12 @@
 
         <!-- Menu nawigacji -->
         <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-[#5E524C]">
-            <a href="https://kamilbogdanski.github.io/uslugi.html" class="hover:text-[#2E221C] transition-colors">Usługi</a>
-            <a href="https://kamilbogdanski.github.io/o-mnie.html" class="hover:text-[#2E221C] transition-colors">O mnie</a>
-            <a href="https://kamilbogdanski.github.io/kontakt.html" class="text-[#2E221C] transition-colors">Kontakt</a>
+            <a href="uslugi.html" class="hover:text-[#2E221C] transition-colors">Usługi</a>
+            <a href="o-mnie.html" class="hover:text-[#2E221C] transition-colors">O mnie</a>
+            <a href="kontakt.html" class="text-[#2E221C] transition-colors">Kontakt</a>
         </nav>
 
-        <!-- Przycisk CTA (aktywny na podstronie kontaktu) -->
+        <!-- Przycisk CTA -->
         <div>
             <a href="mailto:bogdanskikamil@gmail.com" class="bg-[#2E221C] text-[#FAF8F5] px-6 py-2.5 rounded-full text-[14px] font-medium hover:opacity-90 button-minimal flex items-center gap-2">
                 Napisz bezpośrednio <span class="text-[12px]">&#10142;</span>
@@ -82,7 +82,7 @@
                         <span>bogdanskikamil@gmail.com</span>
                     </a>
                     
-                    <a href="tel:+48505189200" class="flex items-center gap-4 text-[#5E524C] hover:text-[#2E221C] transition-colors group">
+                    <a href="tel:+48505989280" class="flex items-center gap-4 text-[#5E524C] hover:text-[#2E221C] transition-colors group">
                         <span class="w-10 h-10 rounded-full bg-[#F2ECE1] flex items-center justify-center text-[#2E221C] group-hover:bg-[#EADFCF] transition-colors">&#9742;</span>
                         <span>+48 505 989 280</span>
                     </a>
@@ -108,8 +108,7 @@
             </div>
 
             <!-- PRAWA STRONA: Płaski, nowoczesny formularz Formspree -->
-            <div class="lg:col-span-7 bg-[#F2ECE1] border border-[#EBE3D5] rounded-[40px] p-8 md:p-10 shadow-sm w-full">
-                <!-- Podmień ID w miejscu "TWÓJ_IDENTYFIKATOR_FORMSPREE" po założeniu darmowego formularza na Formspree.io -->
+            <div class="lg:col-span-7 bg-[#F2ECE1] border border-[#EBE3D5] rounded-[40px] p-8 md:p-12 shadow-sm w-full">
                 <form action="https://formspree.io/f/mjgnyrgl" method="POST" class="flex flex-col gap-6">
                     
                     <!-- Imię i Nazwisko -->
@@ -140,10 +139,17 @@
                                   class="w-full bg-[#FAF8F5] border border-transparent rounded-2xl py-4 px-5 text-[14px] text-[#2E221C] placeholder-[#A1968A] focus:outline-none focus:border-[#2E221C]/30 transition-colors resize-none"></textarea>
                     </div>
 
-                    <!-- Przycisk Wyślij -->
-                    <button type="submit" class="bg-[#2E221C] text-[#FAF8F5] py-4.5 px-8 rounded-2xl text-[15px] font-semibold hover:opacity-95 button-minimal flex items-center justify-center gap-2 cursor-pointer">
-                        Wyślij wiadomość <span>&#10142;</span>
+                    <!-- POWIĘKSZONY PRZYCISK WYŚLIJ -->
+                    <button type="submit" class="w-full bg-[#2E221C] text-[#FAF8F5] py-5 px-8 rounded-2xl text-[16px] font-bold hover:bg-[#403129] transition-all button-minimal flex items-center justify-center gap-3 cursor-pointer mt-2">
+                        <span>Wyślij wiadomość</span>
+                        <span class="text-[18px]">&#10142;</span>
                     </button>
+
+                    <!-- ODNOŚNIK DO POLITYKI PRYWATNOŚCI / KLAUZULA RODO -->
+                    <p class="text-[12px] text-[#8E8276] text-center leading-relaxed mt-1">
+                        Wysyłając formularz, zgadzasz się na przetwarzanie danych w celu obsługi zapytania. <br class="hidden sm:inline">
+                        Szczegóły znajdziesz w <a href="polityka-prywatnosci.html" class="text-[#2E221C] underline font-medium hover:opacity-80 transition-opacity">Polityce Prywatności</a>.
+                    </p>
 
                 </form>
             </div>
@@ -157,9 +163,10 @@
             &copy; 2026 Kamil Bogdański. Wszystkie prawa zastrzeżone.
         </div>
         <div class="flex items-center gap-6">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#2E221C] transition-colors">LinkedIn</a>
-            <a href="mailto:kontakt@kamilbogdanski.pl" class="hover:text-[#2E221C] transition-colors">E-mail</a>
-            <span>Gdańsk, PL</span>
+            <a href="polityka-prywatnosci.html" class="hover:text-[#2E221C] transition-colors underline">Polityka Prywatności</a>
+            <a href="https://linkedin.com/in/kamilbogdanski/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2E221C] transition-colors">LinkedIn</a>
+            <a href="mailto:bogdanskikamil@gmail.com" class="hover:text-[#2E221C] transition-colors">E-mail</a>
+            <span>Zdalnie, PL</span>
         </div>
     </footer>
 
